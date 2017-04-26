@@ -1,0 +1,37 @@
+;;public static int min(int a, int b) {
+;;int min = a;
+;;if(min < b)
+;;min = b;
+;;return min;
+;;}
+
+;; Variable Declarations
+(define a		:: int)  
+(define b		:: int)  
+(define min		:: int)  
+(define rv		:: int) 
+
+(define min1 :: int)
+(define c :: bool)
+
+;;precondtion
+(assert (= min a))
+(assert (c (< min b )))
+(assert (=> c (= min1 b)))
+(assert (=> c ( = rv min1)))
+(assert (=> (not c) (= rv min)))
+
+;;postcondition
+
+(assert
+	(not
+		(and
+			(<= rv a)
+			(<= rv b)
+		)
+	)
+)
+
+(check)
+(show-model)
+

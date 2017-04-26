@@ -1,0 +1,10 @@
+package driver;
+
+import org.yakindu.scr.elevatormodeling.ElevatorModelingStatemachine;
+
+public class ElevatorModelDriver {
+	public static void main(String[] args) {
+		ElevatorModelingStatemachine sm = new ElevatorModelingStatemachine();
+		
+	}
+}

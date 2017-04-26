@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Lab-7-1-Yices/modules/example1-ipp.yx&apos; to &apos;example1-ipp.ys&apos;" description="Rename resource &apos;example1-ipp.yx&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="modules/example1-ipp.yx" name="example1-ipp.ys" stamp="1493063648877" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Lab-7-1-Yices/modules/example1-ipp.ys&apos; to &apos;example1-lpp.ys&apos;" description="Rename resource &apos;example1-ipp.ys&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="modules/example1-ipp.ys" name="example1-lpp.ys" stamp="1493063678075" updateReferences="true"/>
+</session>

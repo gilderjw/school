@@ -1,0 +1,8 @@
+;; LPP problem from slide
+
+(define y :: real)
+(define x1 :: real)
+(define x2 :: real)
+(define x3 :: real)
+
+(assert (= (+ (* 20 x1))))  

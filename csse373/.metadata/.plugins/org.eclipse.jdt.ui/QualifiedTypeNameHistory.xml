@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="driver.ElevatorModelDriver"/>
+<fullyQualifiedTypeName name="org.yakindu.scr.elevatormodeling.ElevatorModelingStatemachine"/>
+<fullyQualifiedTypeName name="org.yakindu.scr.elevatormodeling.IElevatorModelingStatemachine.SCIElevatorOperationCallback"/>
+<fullyQualifiedTypeName name="driver.ArriveCallback"/>
+<fullyQualifiedTypeName name="org.yakindu.scr.elevatormodeling.IElevatorModelingStatemachine.SCIUser"/>
+<fullyQualifiedTypeName name="org.yakindu.scr.elevatormodeling.IElevatorModelingStatemachine"/>
+<fullyQualifiedTypeName name="org.yakindu.scr.elevatormodeling.IElevatorModelingStatemachine.SCIElevator"/>
+</qualifiedTypeNameHistroy>

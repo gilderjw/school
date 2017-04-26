@@ -1,0 +1,12 @@
+;;public static int min(int a, int b) {
+;;int min = a;
+;;if(min < b)
+;;min = b;
+;;return min;
+;;}
+
+;; Variable Declarations
+(define a		:: int)  
+(define b		:: int)  
+(define min		:: int)  
+(define rv		:: int) 

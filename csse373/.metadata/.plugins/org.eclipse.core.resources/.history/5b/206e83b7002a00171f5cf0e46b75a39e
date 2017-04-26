@@ -1,0 +1,18 @@
+package driver;
+
+import org.yakindu.scr.elevatormodeling.ElevatorModelingStatemachine;
+import org.yakindu.scr.elevatormodeling.IElevatorModelingStatemachine;
+
+public class ElevatorModelDriver {
+	public static void main(String[] args) {
+		ElevatorModelingStatemachine sm = new ElevatorModelingStatemachine();
+		
+		IElevatorModelingStatemachine.SCIUser = sm.getSCIUser();
+		IElevatorModelingStatemachine.SCIElevator = sm.getSCIElevator();
+		
+		IElevatorModelingStatemachine.SCIElevatorOperationCallback arriveCb = new ArriveCallback();
+		
+		
+
+	}
+}
