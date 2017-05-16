@@ -1,0 +1,170 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.09 of 10 March 2017
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running in Model-Checking mode with 4 workers.
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file MC.tla
+Parsing file Search.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\TLC.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\Integers.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\Sequences.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module Search
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2017-05-16 16:57:59)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 1 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 15625 distinct states generated.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_1494968279145284000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ low = 0
+/\ middle = 0
+/\ key = 2
+/\ ret = FALSE
+/\ pc = "Lbl_1"
+/\ data = <<1, 1, 3, 1, 2>>
+/\ high = 5
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Action line 39, col 10 to line 57, col 37 of module Search>
+/\ low = 0
+/\ middle = 3
+/\ key = 2
+/\ ret = FALSE
+/\ pc = "Lbl_1"
+/\ data = <<1, 1, 3, 1, 2>>
+/\ high = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Action line 39, col 10 to line 57, col 37 of module Search>
+/\ low = 3
+/\ middle = 2
+/\ key = 2
+/\ ret = FALSE
+/\ pc = "Lbl_1"
+/\ data = <<1, 1, 3, 1, 2>>
+/\ high = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Action line 39, col 10 to line 57, col 37 of module Search>
+/\ low = 3
+/\ middle = 2
+/\ key = 2
+/\ ret = FALSE
+/\ pc = "Done"
+/\ data = <<1, 1, 3, 1, 2>>
+/\ high = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2017-05-16 16:58:00
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 12 to line 28, col 14 of module Search: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 17 to line 28, col 20 of module Search: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 23 to line 28, col 25 of module Search: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 28 to line 28, col 31 of module Search: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 34 to line 28, col 39 of module Search: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 42 to line 28, col 44 of module Search: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 47 to line 28, col 48 of module Search: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 24 to line 41, col 58 of module Search: 33770
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 35 to line 43, col 45 of module Search: 9655
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 35 to line 45, col 44 of module Search: 24115
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 35 to line 47, col 52 of module Search: 11250
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 35 to line 49, col 44 of module Search: 22520
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 35 to line 51, col 53 of module Search: 12865
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 35 to line 53, col 46 of module Search: 20905
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 24 to line 54, col 36 of module Search: 33770
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 24 to line 55, col 35 of module Search: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 37 to line 56, col 39 of module Search: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 42 to line 56, col 45 of module Search: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 48 to line 56, col 53 of module Search: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 56 to line 56, col 58 of module Search: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 26 to line 57, col 28 of module Search: 33781
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 31 to line 57, col 34 of module Search: 33781
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(4) at 2017-05-16 16:58:00: 49406 states generated (2,306,894 s/min), 45761 distinct states found (2,136,700 ds/min), 11977 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+49406 states generated, 45761 distinct states found, 11977 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 4.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 01s at (2017-05-16 16:58:00)
+@!@!@ENDMSG 2186 @!@!@

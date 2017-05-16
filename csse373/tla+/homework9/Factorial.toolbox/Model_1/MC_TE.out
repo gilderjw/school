@@ -1,0 +1,117 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.09 of 10 March 2017
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running in Model-Checking mode with 4 workers.
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file MC.tla
+Parsing file Factorial.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\TLC.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\Integers.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\Naturals.tla
+Parsing file C:\Users\jchai\Downloads\toolbox\plugins\org.lamport.tlatools_1.0.0.201704142137\tla2sany\StandardModules\Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Factorial
+Semantic processing of module Sequences
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2017-05-16 13:14:05)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 1 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 20 distinct states generated.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_149495484524045000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ num = 2
+/\ fact = 1
+/\ i = 1
+/\ pc = "Lbl_1"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Action line 34, col 10 to line 41, col 22 of module Factorial>
+/\ num = 2
+/\ fact = 1
+/\ i = 2
+/\ pc = "Lbl_1"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Action line 34, col 10 to line 41, col 22 of module Factorial>
+/\ num = 2
+/\ fact = 1
+/\ i = 2
+/\ pc = "Done"
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2017-05-16 13:14:05
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 12 to line 26, col 14 of module Factorial: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 17 to line 26, col 17 of module Factorial: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 20 to line 26, col 23 of module Factorial: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 26 to line 26, col 27 of module Factorial: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 24 to line 36, col 39 of module Factorial: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 24 to line 37, col 33 of module Factorial: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 24 to line 38, col 36 of module Factorial: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 24 to line 39, col 35 of module Factorial: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 37 to line 40, col 37 of module Factorial: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 40 to line 40, col 43 of module Factorial: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 13 to line 41, col 22 of module Factorial: 27
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(3) at 2017-05-16 13:14:05: 48 states generated (13,090 s/min), 47 distinct states found (12,818 ds/min), 18 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+48 states generated, 47 distinct states found, 18 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 3.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 00s at (2017-05-16 13:14:05)
+@!@!@ENDMSG 2186 @!@!@
