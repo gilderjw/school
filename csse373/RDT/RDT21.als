@@ -1,10 +1,16 @@
-module rdt20
+module rdt21
 
 open util/ordering[State]
 
 sig Packet {
 	data: one Data,
-	checksum: one Data
+	checksum: one Data,
+	sequence: one Int
+}
+
+// all packet sequences are 0 or 1
+fact PacketSequence {
+	all p: Packet | p.sequence = 0 or p.sequence = 1
 }
 
 sig Data{}
@@ -26,7 +32,8 @@ pred State.Init[] {
 	this.receiveBuffer = none and
 	this.tryingToSend in Data - (ACK + NAK) and
 	this.sendBuffer = Data - (ACK + NAK) - this.tryingToSend and
-	this.channel.data = this.tryingToSend 
+	this.channel.data = this.tryingToSend and
+	this.channel.sequence = 0
 }
 
 //all data have been successfully been transfered
@@ -45,11 +52,20 @@ pred Transition[s, s': State] {
 }
 
 pred ACKinChannel[s, s': State] {
-	s'.channel.data in s.sendBuffer and
-	s'.channel.checksum in Data and 
-	s'.tryingToSend = s'.channel.data and
-	s'.sendBuffer = s.sendBuffer - s'.channel.data and
-	s'.receiveBuffer = s.receiveBuffer
+	(s.channel.data = s.channel.checksum) =>
+		(s'.channel.data in s.sendBuffer and
+		s'.channel.checksum in Data and 
+		s'.tryingToSend = s'.channel.data and
+		s'.sendBuffer = s.sendBuffer - s'.channel.data and
+		s'.receiveBuffer = s.receiveBuffer and
+		s'.channel.sequence = 0)
+	(s.channel.data != s.channel.checksum) => 
+		(	s'.channel.data = s.tryingToSend and 
+		s'.channel.checksum in Data and
+		s'.tryingToSend = s.tryingToSend and 
+		s'.sendBuffer = s.sendBuffer and 
+		s'.channel.sequence = 1 and
+		s'.receiveBuffer = s.receiveBuffer)
 }
 
 pred NAKinChannel[s, s': State] {
@@ -57,7 +73,8 @@ pred NAKinChannel[s, s': State] {
 	s'.channel.checksum in Data and
 	s'.tryingToSend = s.tryingToSend and 
 	s'.sendBuffer = s.sendBuffer and 
-	s'.receiveBuffer = s.receiveBuffer
+	s'.receiveBuffer = s.receiveBuffer and
+	s'.channel.sequence = 1
 }
 
 pred SENDinChannel[s, s': State] {
@@ -69,8 +86,12 @@ pred SENDinChannel[s, s': State] {
 		s'.receiveBuffer = s.receiveBuffer)) and 
 
 	((s.channel.checksum = s.channel.data) =>
-		(s'.receiveBuffer = s.receiveBuffer + s.channel.data and
-		s'.channel.data = ACK))
+		((s.channel.sequence = 0) =>
+			(s'.receiveBuffer = s.receiveBuffer + s.channel.data and
+			s'.channel.data = ACK)) and
+		((s.channel.sequence = 1) =>
+			(s'.receiveBuffer = s.receiveBuffer and 
+			s'.channel.data = ACK)))
 }
 
 //each step in time has to move forward
@@ -98,6 +119,6 @@ pred CannotTransmit {
 	!last.AllTransferedOK
 }
 
-run CanTransmit for 6 State, exactly 5 Data, 4 Packet
+run CanTransmit for 7 State, exactly 5 Data, 7 Packet
 
 run CannotTransmit for 7 State, exactly 5 Data, 5 Packet
