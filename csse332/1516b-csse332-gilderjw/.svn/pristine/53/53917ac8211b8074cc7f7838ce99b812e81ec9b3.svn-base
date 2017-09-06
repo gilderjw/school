@@ -1,0 +1,8 @@
+Usage: ./signals <user>
+
+Handles SIGINT, SIGQUIT, SIGALRM, SIGUSR1
+
+SIGINT - prints "duces brah" then exits the program with code 2
+SIGQUIT - performs ps -u <user>
+SIGALRM - beeps every 5 seconds
+SIGUSR1 - querys user for a pid to kill, then executes kill -USR1 <pid>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activetestcases>
+<activetsc IMemento.internal.id="/Tutorial6/codecover/test-session-container-2016-04-19-14-32-46-755.xml"/>
+<tsc IMemento.internal.id="/Tutorial6/codecover/test-session-container-2016-04-19-12-59-07-681.xml">
+<ts IMemento.internal.id="Apr 19, 2016 2:31:14 PM">
+<tc IMemento.internal.id="UNNAMED TESTCASE"/>
+</ts>
+</tsc>
+<tsc IMemento.internal.id="/Tutorial6/codecover/test-session-container-2016-04-19-14-32-46-755.xml">
+<ts IMemento.internal.id="Apr 20, 2016 4:28:41 PM">
+<tc IMemento.internal.id="UNNAMED TESTCASE"/>
+</ts>
+<ts IMemento.internal.id="Apr 20, 2016 4:44:56 PM">
+<tc IMemento.internal.id="UNNAMED TESTCASE"/>
+</ts>
+</tsc>
+</activetestcases>

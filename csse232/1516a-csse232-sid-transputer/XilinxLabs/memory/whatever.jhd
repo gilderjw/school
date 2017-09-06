@@ -1,0 +1,5 @@
+MODULE whatever
+	SUBMODULE MIPS_control_unit
+		INSTANCE XLXI_1
+	SUBMODULE blockmemory16kx1
+		INSTANCE XLXI_2

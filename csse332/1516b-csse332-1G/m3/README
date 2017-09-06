@@ -1,0 +1,16 @@
+/* Jim Gildersleeve Brian Suchy Guilherme Simas */
+We made a real neeto shell for our OS
+
+Shell commands
+	-type <filename>
+		prints the file given (basically cat)
+
+	-execute <filname>
+		executes the file given
+
+You can verify functionality by:
+	1. run make
+	2. start bochs
+	3. type in "type messag" (this will print a message)
+	4. type in "execute tstpr2" (this will also print a message)
+	5. if you mistype, you will get the message "You are bad and you should feel bad"

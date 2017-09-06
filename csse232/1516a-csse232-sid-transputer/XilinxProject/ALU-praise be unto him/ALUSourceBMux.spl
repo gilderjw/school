@@ -1,0 +1,12 @@
+[Inputs]
+=ALUSrcB[1:0]=
+=Three[15:0]=
+=Two[15:0]=
+=One[15:0]=
+=Zero[15:0]=
+[Outputs]
+=r[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ALUSourceBMux
+

@@ -1,0 +1,79 @@
+% :- module(csse403nlp,[parse/2,translate/2]).
+% we should use a module,really, but it wasn't obvious how to
+% make it so the that the operator => displays correctly when it
+% is in a module.
+
+% this creates a new => operator to have the same priority as +
+% seems to make it behave as you would expect.
+:- op(200, xfx, =>).
+=>(_,_).
+
+% your code goes below
+% the tests are in another file
+
+
+noun(apple).
+noun(boy).
+noun(girl).
+
+qualifier(some).
+qualifier(all).
+
+intransitive_verb(run).
+intransitive_verb(dance).
+
+transitive_verb(like).
+transitive_verb(hate).
+transitive_verb(respect).
+
+relative_clause(that).
+relative_clause(which).
+
+
+%% S --> NP VP    
+statement(X) :-
+        noun_phrase(X,NounRemainder),
+        verb_phrase(NounRemainder,[]).
+
+%% NP --> Qual Noun 
+noun_phrase([Qual,Noun|Rest],Rest) :- 
+	noun(Noun),
+	qualifier(Qual).
+
+%% NP --> Qual RELCL 
+noun_phrase([Noun, RelClause|Rest],Rest) :- 
+	noun(Noun),
+	relative_clause(RelClause).
+
+%% VP --> Int-Verb 
+verb_phrase([Verb|Rest], Rest) :- 
+	intransitive_verb(Verb).
+
+%% VP --> Trans-Verb NP
+verb_phrase([Verb, NounPhrase|Rest], Rest) :-
+	transitive_verb(Verb),
+	noun_phrase(NounPhrase).
+
+%% RELCL --> Noun Rel VP 
+relative_clause([Noun, Rel, Verb|Rest], Rest) :-
+	noun(Noun),
+	relative_clause(Rel),
+	verb_phrase(Verb).
+
+%% RELCL --> Noun Rel NP Trans-Verb
+relative_clause([Noun, Rel, Noun, Verb|Rest], Rest) :-
+	noun(Noun),
+	relative_clause(Rel),
+	noun_phrase(Noun),
+	transitive_verb(Verb).
+
+%% parse(X,statement(NT,VT)).
+
+%% translate(statement(NT,VT), Output).
+
+
+
+
+
+
+

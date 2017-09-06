@@ -1,0 +1,31 @@
+
+
+
+// Instantiate the module
+AluTheGOD instance_name (
+    .CLK(CLK), 
+    .Opcode(Opcode), 
+    .Comparison(Comparison), 
+    .PCSrc(PCSrc), 
+    .PCWrite(PCWrite), 
+    .MAddr(MAddr), 
+    .MDin(MDin), 
+    .MRead(MRead), 
+    .MWrite(MWrite), 
+    .RFWA(RFWA), 
+    .RFWD(RFWD), 
+    .RFRead(RFRead), 
+    .RDWrite(RDWrite), 
+    .SPWrite(SPWrite), 
+    .AWrite(AWrite), 
+    .BWrite(BWrite), 
+    .ALUInA(ALUInA), 
+    .ALUInB(ALUInB), 
+    .ALUOp(ALUOp), 
+    .ALUOutWrite(ALUOutWrite), 
+    .Branch(Branch), 
+    .SPRel(SPRel), 
+    .PshPop(PshPop)
+    );
+
+

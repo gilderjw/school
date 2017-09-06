@@ -1,0 +1,3 @@
+verilog work "BlockMemoryContrl.v"
+verilog work "ipcore_dir/blockmemory16kx1.v"
+verilog work "whatever.vf"

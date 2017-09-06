@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="devops.hw1.core.BackendTest"/>
+<fullyQualifiedTypeName name="devops.hw1.core.Backend"/>
+<fullyQualifiedTypeName name="devops.hw1.core.Zone"/>
+<fullyQualifiedTypeName name="devops.hw1.core.ZoneTest"/>
+<fullyQualifiedTypeName name="devops.hw1.core.SMELParser"/>
+<fullyQualifiedTypeName name="ExpediaTest.HotelTest"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="com.indigo.batches.Quartermaster"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="org.easymock.EasyMock"/>
+<fullyQualifiedTypeName name="com.rabbitmq.RabbitMQ"/>
+</qualifiedTypeNameHistroy>

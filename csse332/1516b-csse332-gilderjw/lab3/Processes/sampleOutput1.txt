@@ -1,0 +1,34 @@
+gilderjw@gilderjw-ThinkPad-W540:~/Documents/csse332/1516b-csse332-gilderjw/lab3/Processes$ ./processes 4 100000 Files.txt
+lineNumber:1
+lineNumber:2
+lineNumber:3
+lineNumber:4
+process number 4:
+ argv[0]  is myCopy
+ argv[1]  is FileFour.txt
+ argv[2]  is FileFour_out.txt
+In program myCopy. Have just finished reading from file FileFour.txt....
+In program myCopy. Have just finished writing to file FileFour_out.txt .....
+process number 3:
+ argv[0]  is myCopy
+ argv[1]  is FileThree.txt
+ argv[2]  is FileThree_out.txt
+In program myCopy. Have just finished reading from file FileThree.txt....
+In program myCopy. Have just finished writing to file FileThree_out.txt .....
+process number 2:
+ argv[0]  is myCopy
+ argv[1]  is FileTwo.txt
+ argv[2]  is FileTwo_out.txt
+In program myCopy. Have just finished reading from file FileTwo.txt....
+In program myCopy. Have just finished writing to file FileTwo_out.txt .....
+process number 1:
+ argv[0]  is myCopy
+ argv[1]  is FileOne.txt
+ argv[2]  is FileOne_out.txt
+In program myCopy. Have just finished reading from file FileOne.txt....
+In program myCopy. Have just finished writing to file FileOne_out.txt .....
+Time for process 1 = 301131 microseconds.
+Time for process 2 = 301071 microseconds.
+Time for process 3 = 301023 microseconds.
+Time for process 4 = 300974 microseconds.
+parent done in: 301165

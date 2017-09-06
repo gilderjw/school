@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/FORCEMSB0.v} -lang verilog -prj AluTheGOD -o FORCEMSB0.spl -module FORCEMSB0 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w FORCEMSB0.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/FORCEMSB0.sym} 

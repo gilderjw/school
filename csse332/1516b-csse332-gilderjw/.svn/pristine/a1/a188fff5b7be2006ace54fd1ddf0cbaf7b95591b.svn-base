@@ -1,0 +1,384 @@
+arilinereservation by jim gildersleeve and brian suchy
+
+this program demonstrates the use of shared memory across processes by synchronizing them using semaphores and shared memory via shmget
+./airlinereservation will exec() multiple instances of client that will each reserve seats on the flight
+each customer accesses a common struct (plane) to modify and reserve seats on the plane mutual exculded from other processes
+After each seat that a process reserves, it prints the state of the plane
+once each process has finished reserving seats, it will output information about the reservations in the output file
+
+It appears that the printing of the actual plane is not necessarily next to the ine describing a process we decided to not worry about synchronizing it because the processes would not really be parallel then
+
+usage: ./airlinereservation <number of customers> <output file>
+
+examples:
+
+./airlinereservation 2 example1.out
+plane:
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B  C|_           
+          _/ |A B  C| \_         
+        _/   |A B  C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B  C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |A B  C|       \___\
+|/           |A B  C|           \|
+             |A B  C|            
+             |A B  C|            
+             |______|
+id: 0, type: coach, reserved 2/2, at: 8, 34
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B   |_           
+          _/ |A B  C| \_         
+        _/   |A B  C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B  C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |A B  C|       \___\
+|/           |A B  C|           \|
+             |A B  C|            
+             |A    C|            
+             |______|
+id: 1, type: coach, reserved 1/1, at: 14
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B   |_           
+          _/ |A B  C| \_         
+        _/   |A B   |   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B  C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |A B  C|       \___\
+|/           |A B  C|           \|
+             |A B  C|            
+             |A    C|            
+             |______|
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./airlinereservation 4 example2.out
+plane:
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B  C|_           
+          _/ |A B  C| \_         
+        _/   |A B  C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B  C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |A B  C|       \___\
+|/           |A B  C|           \|
+             |A B  C|            
+             |A B  C|            
+             |______|
+id: 0, type: coach, reserved 1/1, at: 13
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B  C|_           
+          _/ |A B  C| \_         
+        _/   |A    C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B  C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |A B  C|       \___\
+|/           |A B  C|           \|
+             |A B  C|            
+             |A B  C|            
+             |______|
+id: 1, type: coach, reserved 3/3, at: 19, 8, 34
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B   |_           
+          _/ |A B  C| \_         
+        _/   |A    C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A    C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |  B  C|       \___\
+|/           |A    C|           \|
+             |  B  C|            
+             |A    C|            
+             |______|
+id: 3, type: coach, reserved 1/1, at: 24
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B   |_           
+          _/ |     C| \_         
+        _/   |A    C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A    C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |  B  C|       \___\
+|/           |A    C|           \|
+             |  B  C|            
+             |A    C|            
+             |______|
+id: 2, type: coach, reserved 4/4, at: 9, 28, 30, 10
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B   |_           
+          _/ |     C| \_         
+        _/   |A    C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A    C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |  B  C|       \___\
+|/           |A    C|           \|
+             |  B  C|            
+             |A    C|            
+             |______|
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`~~~~~~~~~~~~~~~~
+
+./airlinereservation 10 example3.out
+plane:
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B  C|_           
+          _/ |A B  C| \_         
+        _/   |A B  C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B  C|___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |A B  C|       \___\
+|/           |A B  C|           \|
+             |A B  C|            
+             |A B  C|            
+             |______|
+id: 0, type: coach, reserved 5/5, at: 20, 34, 31, 25, 24
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|A B  C|_           
+          _/ |A B  C| \_         
+        _/   |A B  C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B   |___    \_   
+  _/  ___/   |A B  C|   \___  \_ 
+ /___/       |     C|       \___\
+|/           |A B  C|           \|
+             |A    C|            
+             |A    C|            
+             |______|
+id: 4, type: coach, reserved 2/2, at: 6, 35
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A B  C|            
+             |A B  C|            
+             |______|            
+            _|  B  C|_           
+          _/ |A B   | \_         
+        _/   |A    C|   \_       
+      _/     |A B  C|     \_     
+    _/    ___|A B   |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |     C|       \___\
+|/           |A     |           \|
+             |A    C|            
+             |A     |            
+             |______|
+id: 3, type: coach, reserved 4/4, at: 10, 16, 27, 33
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |     C|   \_       
+      _/     |A    C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|
+id: 8, type: coach, reserved 6/6, at: 29, 13, 21, 22, 23, 28
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |      |   \_       
+      _/     |     C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|
+id: 1, type: coach, reserved 1/1, at: 12
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |      |   \_       
+      _/     |     C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|
+id: 7, type: first class, reserved 1/1, at: 1
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |      |   \_       
+      _/     |     C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|
+id: 5, type: coach, reserved 6/6, at: 8, 18, 9, 7, 30, 26
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |      |   \_       
+      _/     |     C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|
+id: 6, type: coach, reserved 1/1, at: 11
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |      |   \_       
+      _/     |     C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|
+id: 2, type: first class, reserved 1/1, at: 5
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |      |   \_       
+      _/     |     C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|
+id: 9, type: coach, reserved 4/4, at: 19, 15, 32, 14
+                /\ 
+               /  \ 
+              /    \ 
+             /      \ 
+             |A    C|            
+             |A B   |            
+             |______|            
+            _|      |_           
+          _/ |      | \_         
+        _/   |      |   \_       
+      _/     |     C|     \_     
+    _/    ___|      |___    \_   
+  _/  ___/   |      |   \___  \_ 
+ /___/       |      |       \___\
+|/           |      |           \|
+             |      |            
+             |      |            
+             |______|

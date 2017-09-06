@@ -1,0 +1,123 @@
+this file demonstrates the use of threads to sort an input file using a brute force, bubble, and merge sort for different parts of the data. 
+
+ussage: ./threads <number of threads> <infile> <outfile>
+
+reads the data from the input file expecting a list of numbers seperated by new lines and outputs a sorted list of the data into outfile
+
+will print running times of individial parts of sorts including minimum, maximum and mean values of run times
+
+ex:
+./threads 3 Costs.txt out.txt
+bruteForceSort created
+bubbleSort created
+mergesort created 2
+Time for merge at id 2= 1021 microseconds.
+Time for bruteforceSort at id 0 = 34193 microseconds
+Time for bubbleSort at id 1= 52845 microseconds.
+bruteForceSort max: 34193, min: 34193, average: 34193.000000
+bubbleSort max: 52845, min: 52845, average: 52845.000000
+mergeSort max: 1021, min: 1021, average: 1021.000000
+
+./threads 5 Costs.txt out.txt
+bruteForceSort created
+mergesort created 4
+bubbleSort created
+mergesort created 2
+Time for merge at id 4= 1434 microseconds.
+Time for merge at id 2= 1440 microseconds.
+mergesort created 3
+Time for merge at id 3= 1436 microseconds.
+Time for bruteforceSort at id 0 = 18799 microseconds
+Time for bubbleSort at id 1= 26365 microseconds.
+bruteForceSort max: 18799, min: 18799, average: 18799.000000
+bubbleSort max: 26365, min: 26365, average: 26365.000000
+mergeSort max: 1440, min: 1434, average: 4310.000000
+
+./threads 42 Costs.txt out.txt
+bruteForceSort created
+bruteForceSort created
+bruteForceSort created
+bruteForceSort created
+Time for bruteforceSort at id 0 = Time for bruteforceSort at id 2 = 186 microseconds
+187 microseconds
+bubbleSort created
+bruteForceSort created
+bubbleSort created
+Time for bruteforceSort at id 5 = 289 microseconds
+Time for bruteforceSort at id 1 = 295 microseconds
+bruteForceSort created
+bruteForceSort created
+Time for bruteforceSort at id 3 = 285 microseconds
+bubbleSort created
+Time for bubbleSort at id 24= 378 microseconds.
+Time for bruteforceSort at id 6 = 288 microseconds
+bruteForceSort created
+Time for bruteforceSort at id 7 = 298 microseconds
+Time for bubbleSort at id 25= 475 microseconds.
+Time for bruteforceSort at id 4 = 177 microseconds
+bruteForceSort created
+Time for bubbleSort at id 23= 384 microseconds.
+mergesort created 35
+mergesort created 36
+bubbleSort created
+mergesort created 37
+bubbleSort created
+mergesort created 30
+bubbleSort created
+Time for bruteforceSort at id 8 = mergesort created 28
+bruteForceSort created
+bruteForceSort created
+Time for merge at id 37= 105 microseconds.
+Time for bruteforceSort at id 9 = 181 microseconds
+Time for merge at id 28= 213 microseconds.
+Time for merge at id 36= 257 microseconds.
+mergesort created 32
+mergesort created 31
+bruteForceSort created
+bruteForceSort created
+Time for bruteforceSort at id 12 = 290 microseconds
+mergesort created 33
+mergesort created 34
+Time for merge at id 30= 304 microseconds.
+bubbleSort created
+Time for bubbleSort at id 19= 382 microseconds.
+bubbleSort created
+Time for bubbleSort at id 15= 408 microseconds.
+bubbleSort created
+bruteForceSort created
+Time for bruteforceSort at id 11 = 281 microseconds
+Time for bruteforceSort at id 10 = 287 microseconds
+230 microseconds
+Time for bubbleSort at id 21= 323 microseconds.
+bubbleSort created
+bubbleSort created
+Time for bruteforceSort at id 13 = 284 microseconds
+Time for bubbleSort at id 18= 314 microseconds.
+bubbleSort created
+Time for bubbleSort at id 16= 415 microseconds.
+Time for merge at id 32= 599 microseconds.
+Time for merge at id 34= 641 microseconds.
+bubbleSort created
+mergesort created 29
+Time for bubbleSort at id 27= 366 microseconds.
+Time for merge at id 31= 649 microseconds.
+mergesort created 39
+Time for merge at id 33= 637 microseconds.
+bubbleSort created
+Time for merge at id 29= 44 microseconds.
+Time for bubbleSort at id 22= 340 microseconds.
+Time for bubbleSort at id 20= 398 microseconds.
+Time for bubbleSort at id 17= 381 microseconds.
+Time for merge at id 35= 49 microseconds.
+mergesort created 38
+Time for merge at id 38= 45 microseconds.
+Time for bubbleSort at id 26= 462 microseconds.
+Time for bubbleSort at id 14= 458 microseconds.
+mergesort created 40
+Time for merge at id 39= 557 microseconds.
+mergesort created 41
+Time for merge at id 40= 36 microseconds.
+Time for merge at id 41= 60 microseconds.
+bruteForceSort max: 298, min: 177, average: 254.142857
+bubbleSort max: 475, min: 458, average: 391.714286
+mergeSort max: 649, min: 36, average: 299.714286

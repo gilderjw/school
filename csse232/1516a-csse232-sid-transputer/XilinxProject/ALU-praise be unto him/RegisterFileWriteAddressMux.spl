@@ -1,0 +1,9 @@
+[Inputs]
+=RFWA[1:0]=
+=InstructionRegister[3:0]=
+[Outputs]
+=r[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel RegisterFileWriteAddressMux
+

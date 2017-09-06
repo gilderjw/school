@@ -1,0 +1,171 @@
+var _user$project$ElmFinalGame_Update$hit = F8(
+	function (x1, y1, width1, height1, x2, y2, width2, height2) {
+		return (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$Basics$abs(x1 - x2),
+			(width1 / 2) + (width2 / 2)) < 0) && (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$Basics$abs(y1 - y2),
+			(height1 / 2) + (height2 / 2)) < 0);
+	});
+var _user$project$ElmFinalGame_Update$isEnemyHitByBullet = F2(
+	function (enemy, bullet) {
+		var _p0 = enemy;
+		var _p1 = bullet;
+		return A8(_user$project$ElmFinalGame_Update$hit, _p0._0._0, _p0._0._1, _p0._0._2, _p0._0._3, _p1._0._0, _p1._0._1, 5, 5);
+	});
+var _user$project$ElmFinalGame_Update$enemyIsAlive = F2(
+	function (model, updater) {
+		var _p2 = updater;
+		var _p4 = _p2._0._1;
+		var _p3 = _p2._0._0;
+		return ((_elm_lang$core$Native_Utils.cmp(_p3, 500) < 1) && ((_elm_lang$core$Native_Utils.cmp(_p3, 0) > -1) && ((_elm_lang$core$Native_Utils.cmp(_p4, 500) < 1) && (_elm_lang$core$Native_Utils.cmp(_p4, 0) > -1)))) && (!A3(
+			_elm_lang$core$List$foldr,
+			F2(
+				function (bullet, acc) {
+					return acc || A2(_user$project$ElmFinalGame_Update$isEnemyHitByBullet, updater, bullet);
+				}),
+			false,
+			model.bullets));
+	});
+var _user$project$ElmFinalGame_Update$bulletIsOnScreen = function (updater) {
+	var _p5 = updater;
+	var _p7 = _p5._0._1;
+	var _p6 = _p5._0._0;
+	return (_elm_lang$core$Native_Utils.cmp(_p6, 500) < 1) && ((_elm_lang$core$Native_Utils.cmp(_p6, 0) > -1) && ((_elm_lang$core$Native_Utils.cmp(_p7, 500) < 1) && (_elm_lang$core$Native_Utils.cmp(_p7, 0) > -1)));
+};
+var _user$project$ElmFinalGame_Update$stillEnemyUpdate = F5(
+	function (x, y, width, height, delta) {
+		return A2(
+			_user$project$ElmFinalGame_Types$EnemyUpdater,
+			{ctor: '_Tuple4', _0: x, _1: y, _2: width, _3: height},
+			A4(_user$project$ElmFinalGame_Update$stillEnemyUpdate, x, y, width, height));
+	});
+var _user$project$ElmFinalGame_Update$straightBulletUpdate = F4(
+	function (x, y, speed, delta) {
+		var newX = x;
+		var newY = y + ((speed * delta) / 60);
+		return A2(
+			_user$project$ElmFinalGame_Types$BUpdater,
+			{ctor: '_Tuple2', _0: newX, _1: newY},
+			A3(_user$project$ElmFinalGame_Update$straightBulletUpdate, newX, newY, speed));
+	});
+var _user$project$ElmFinalGame_Update$updateEnemy = F2(
+	function (delta, updater) {
+		var _p8 = updater;
+		return _p8._1(delta);
+	});
+var _user$project$ElmFinalGame_Update$updateBullet = F2(
+	function (delta, updater) {
+		var _p9 = updater;
+		return _p9._1(delta);
+	});
+var _user$project$ElmFinalGame_Update$spawnStraightBullet = F2(
+	function (model, speed) {
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				bullets: A2(
+					_elm_lang$core$List$append,
+					model.bullets,
+					{
+						ctor: '::',
+						_0: A4(_user$project$ElmFinalGame_Update$straightBulletUpdate, model.x, model.y, speed, 0),
+						_1: {ctor: '[]'}
+					})
+			});
+	});
+var _user$project$ElmFinalGame_Update$updateControls = F2(
+	function (model, keyCode) {
+		var _p10 = keyCode;
+		switch (_p10.ctor) {
+			case 'Right':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{x: model.x + model.vel, key: keyCode});
+			case 'Left':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{x: model.x - model.vel, key: keyCode});
+			case 'Up':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y - model.vel, key: keyCode});
+			case 'Down':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y + model.vel, key: keyCode});
+			case 'UpLeft':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y - model.vel, x: model.x - model.vel, key: keyCode});
+			case 'UpRight':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y - model.vel, x: model.x + model.vel, key: keyCode});
+			case 'DownLeft':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y + model.vel, x: model.x - model.vel, key: keyCode});
+			case 'DownRight':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y + model.vel, x: model.x + model.vel, key: keyCode});
+			case 'Shoot':
+				return A2(
+					_user$project$ElmFinalGame_Update$spawnStraightBullet,
+					A2(_user$project$ElmFinalGame_Update$updateControls, model, model.key),
+					-20);
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{key: keyCode});
+		}
+	});
+var _user$project$ElmFinalGame_Update$update = F2(
+	function (msg, model) {
+		var _p11 = msg;
+		if (_p11.ctor === 'Key') {
+			return {
+				ctor: '_Tuple2',
+				_0: A2(_user$project$ElmFinalGame_Update$updateControls, model, _p11._0),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		} else {
+			var _p14 = _p11._0;
+			var _p12 = model.lastTime;
+			if (_p12.ctor === 'Just') {
+				var _p13 = _p12._0;
+				var newEnemies = A2(
+					_elm_lang$core$List$map,
+					_user$project$ElmFinalGame_Update$updateEnemy(_p14 - _p13),
+					model.enemies);
+				var newBullets = A2(
+					_elm_lang$core$List$map,
+					_user$project$ElmFinalGame_Update$updateBullet(_p14 - _p13),
+					model.bullets);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							lastTime: _elm_lang$core$Maybe$Just(_p14),
+							bullets: A2(_elm_lang$core$List$filter, _user$project$ElmFinalGame_Update$bulletIsOnScreen, newBullets),
+							enemies: A2(
+								_elm_lang$core$List$filter,
+								_user$project$ElmFinalGame_Update$enemyIsAlive(model),
+								newEnemies)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			} else {
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							lastTime: _elm_lang$core$Maybe$Just(_p14)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			}
+		}
+	});

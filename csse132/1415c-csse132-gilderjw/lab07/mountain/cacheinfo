@@ -1,0 +1,7 @@
+hi micah,
+
+we think we have an 8m cache because after 8m, the performance drops (probs l3 because it is the slowest one)
+
+maybe a 128k L2 because the performance seems like a decent jump that does not look too noisy
+
+L1 is 32k because it seems like the highest performance

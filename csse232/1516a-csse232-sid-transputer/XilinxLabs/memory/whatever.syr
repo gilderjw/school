@@ -1,0 +1,403 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: whatever.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "whatever.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "whatever"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : whatever
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "BlockMemoryContrl.v" in library work
+Compiling verilog file "ipcore_dir/blockmemory16kx1.v" in library work
+Module <MIPS_control_unit> compiled
+Compiling verilog file "whatever.vf" in library work
+Module <blockmemory16kx1> compiled
+Module <whatever> compiled
+No errors in compilation
+Analysis of file <"whatever.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <whatever> in library <work>.
+
+Analyzing hierarchy for module <MIPS_control_unit> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <whatever>.
+WARNING:Xst:2211 - "ipcore_dir/blockmemory16kx1.v" line 61: Instantiating black box module <blockmemory16kx1>.
+Module <whatever> is correct for synthesis.
+ 
+Analyzing module <MIPS_control_unit> in library <work>.
+WARNING:Xst:2323 - "BlockMemoryContrl.v" line 38: Parameter 2 is not constant in call of system task $display.
+"BlockMemoryContrl.v" line 38: $display : The opcode is %d
+"BlockMemoryContrl.v" line 42: $display : R-type
+WARNING:Xst:2323 - "BlockMemoryContrl.v" line 83: Parameter 2 is not constant in call of system task $display.
+"BlockMemoryContrl.v" line 83: $display :  Wrong Opcode %d 
+Module <MIPS_control_unit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MIPS_control_unit>.
+    Related source file is "BlockMemoryContrl.v".
+WARNING:Xst:647 - Input <Reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <MemRead>.
+    Found 1-bit register for signal <Branch>.
+    Found 1-bit register for signal <RegDst>.
+    Found 1-bit register for signal <RegWrite>.
+    Found 1-bit register for signal <MemWrite>.
+    Found 1-bit register for signal <ALUSrc>.
+    Found 1-bit register for signal <MemtoReg>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <MIPS_control_unit> synthesized.
+
+
+Synthesizing Unit <whatever>.
+    Related source file is "whatever.vf".
+WARNING:Xst:646 - Signal <memToControl<15:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <whatever> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 7
+ 1-bit register                                        : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/blockmemory16kx1.ngc>.
+Loading core <blockmemory16kx1> for timing and area information for instance <XLXI_2>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <whatever> ...
+
+Optimizing unit <MIPS_control_unit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block whatever, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : whatever.ngr
+Top Level Output File Name         : whatever
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 36
+
+Cell Usage :
+# BELS                             : 22
+#      GND                         : 1
+#      LUT2                        : 2
+#      LUT2_L                      : 2
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 11
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 7
+#      FD                          : 5
+#      FDS                         : 2
+# RAMS                             : 1
+#      RAMB16_S18_S18              : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 27
+#      OBUF                        : 7
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       10  out of   4656     0%  
+ Number of Slice Flip Flops:              7  out of   9312     0%  
+ Number of 4 input LUTs:                 20  out of   9312     0%  
+ Number of IOs:                          36
+ Number of bonded IOBs:                  35  out of    232    15%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                        | Load  |
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------+
+clock                              | BUFGP                                                                                                                        | 8     |
+XLXI_2/N0                          | NONE(XLXI_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram)| 1     |
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.079ns (Maximum Frequency: 141.263MHz)
+   Minimum input arrival time before clock: 2.891ns
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 7.079ns (frequency: 141.263MHz)
+  Total number of paths / destination ports: 89 / 9
+-------------------------------------------------------------------------
+Delay:               7.079ns (Levels of Logic = 4)
+  Source:            XLXI_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (RAM)
+  Destination:       XLXI_1/MemWrite (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: XLXI_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram to XLXI_1/MemWrite
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S18_S18:CLKA->DOA1    6   2.800   0.844  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (douta<1>)
+     end scope: 'XLXI_2'
+     LUT2:I0->O            1   0.704   0.424  XLXI_1/MemWrite_mux00002_SW0 (N6)
+     LUT4:I3->O            4   0.704   0.591  XLXI_1/MemWrite_mux00002 (XLXI_1/N6)
+     LUT4:I3->O            1   0.704   0.000  XLXI_1/MemWrite_mux00003 (XLXI_1/MemWrite_mux0000)
+     FD:D                      0.308          XLXI_1/MemWrite
+    ----------------------------------------
+    Total                      7.079ns (5.220ns logic, 1.859ns route)
+                                       (73.7% logic, 26.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              2.891ns (Levels of Logic = 2)
+  Source:            wea (PAD)
+  Destination:       XLXI_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram (RAM)
+  Destination Clock: clock rising
+
+  Data Path: wea to XLXI_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  wea_IBUF (wea_IBUF)
+     begin scope: 'XLXI_2'
+     RAMB16_S18_S18:WEA        1.253          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_init.ram/dpram.dp18x18.ram
+    ----------------------------------------
+    Total                      2.891ns (2.471ns logic, 0.420ns route)
+                                       (85.5% logic, 14.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            XLXI_1/RegDst (FF)
+  Destination:       regdest (PAD)
+  Source Clock:      clock rising
+
+  Data Path: XLXI_1/RegDst to regdest
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.447  XLXI_1/RegDst (XLXI_1/RegDst)
+     OBUF:I->O                 3.272          regdest_OBUF (regdest)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.90 secs
+ 
+--> 
+
+
+Total memory usage is 522292 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

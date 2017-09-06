@@ -1,0 +1,445 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : TopLevel_drc.vf
+// /___/   /\     Timestamp : 11/15/2015 10:25:56
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/sch2hdl -sympath "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ipcore_dir" -intstyle ise -family spartan3e -verilog TopLevel_drc.vf -w "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TopLevel.sch"
+//Design Name: TopLevel
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module IFD_MXILINX_TopLevel(C, 
+                            D, 
+                            Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input D;
+   output Q;
+   
+   wire D_IN;
+   wire XLXN_1;
+   wire XLXN_2;
+   
+   (* IOB = "TRUE" *) 
+   FDCE  I_36_15 (.C(C), 
+                 .CE(XLXN_2), 
+                 .CLR(XLXN_1), 
+                 .D(D_IN), 
+                 .Q(Q));
+   (* IOSTANDARD = "DEFAULT" *) (* IBUF_DELAY_VALUE = "0" *) (* 
+         IFD_DELAY_VALUE = "AUTO" *) 
+   IBUF  I_36_24 (.I(D), 
+                 .O(D_IN));
+   VCC  I_36_26 (.P(XLXN_2));
+   GND  I_36_29 (.G(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module FD16RE_MXILINX_TopLevel(C, 
+                               CE, 
+                               D, 
+                               R, 
+                               Q);
+
+    input C;
+    input CE;
+    input [15:0] D;
+    input R;
+   output [15:0] Q;
+   
+   
+   FDRE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .D(D[0]), 
+              .R(R), 
+              .Q(Q[0]));
+   FDRE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .D(D[1]), 
+              .R(R), 
+              .Q(Q[1]));
+   FDRE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .D(D[2]), 
+              .R(R), 
+              .Q(Q[2]));
+   FDRE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .D(D[3]), 
+              .R(R), 
+              .Q(Q[3]));
+   FDRE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .D(D[4]), 
+              .R(R), 
+              .Q(Q[4]));
+   FDRE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .D(D[5]), 
+              .R(R), 
+              .Q(Q[5]));
+   FDRE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .D(D[6]), 
+              .R(R), 
+              .Q(Q[6]));
+   FDRE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .D(D[7]), 
+              .R(R), 
+              .Q(Q[7]));
+   FDRE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .D(D[8]), 
+              .R(R), 
+              .Q(Q[8]));
+   FDRE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .D(D[9]), 
+              .R(R), 
+              .Q(Q[9]));
+   FDRE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .D(D[10]), 
+               .R(R), 
+               .Q(Q[10]));
+   FDRE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .D(D[11]), 
+               .R(R), 
+               .Q(Q[11]));
+   FDRE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .D(D[12]), 
+               .R(R), 
+               .Q(Q[12]));
+   FDRE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .D(D[13]), 
+               .R(R), 
+               .Q(Q[13]));
+   FDRE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .D(D[14]), 
+               .R(R), 
+               .Q(Q[14]));
+   FDRE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .D(D[15]), 
+               .R(R), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module TopLevel(CLK, 
+                ALUOutResult, 
+                AOutput, 
+                BOutput, 
+                C_ALUInA, 
+                C_ALUInB, 
+                C_ALUOp, 
+                C_ALUOutWrite, 
+                C_AWrite, 
+                C_Branch, 
+                C_BWrite, 
+                C_DEBUG_NextState, 
+                C_IRWrite, 
+                C_MAddr, 
+                C_MDin, 
+                C_MRead, 
+                C_MWrite, 
+                C_PCSrc, 
+                C_PCWrite, 
+                C_PshPop, 
+                C_RDWrite, 
+                C_RFRead, 
+                C_RFWA, 
+                C_RFWD, 
+                C_SPRel, 
+                C_SPWrite, 
+                instruction, 
+                MemoryAddress, 
+                MemoryOut, 
+                PCVal, 
+                XLXN_185);
+
+    input CLK;
+   output [15:0] ALUOutResult;
+   output [15:0] AOutput;
+   output [15:0] BOutput;
+   output C_ALUInA;
+   output [1:0] C_ALUInB;
+   output [3:0] C_ALUOp;
+   output C_ALUOutWrite;
+   output C_AWrite;
+   output C_Branch;
+   output C_BWrite;
+   output [3:0] C_DEBUG_NextState;
+   output C_IRWrite;
+   output [1:0] C_MAddr;
+   output C_MDin;
+   output C_MRead;
+   output C_MWrite;
+   output [1:0] C_PCSrc;
+   output C_PCWrite;
+   output C_PshPop;
+   output C_RDWrite;
+   output C_RFRead;
+   output [1:0] C_RFWA;
+   output [2:0] C_RFWD;
+   output C_SPRel;
+   output C_SPWrite;
+   output [15:0] instruction;
+   output [15:0] MemoryAddress;
+   output [15:0] MemoryOut;
+   output [15:0] PCVal;
+   output [15:0] XLXN_185;
+   
+   wire [15:0] cmp;
+   wire [15:0] XLXN_7;
+   wire [3:0] XLXN_8;
+   wire [15:0] XLXN_10;
+   wire [15:0] XLXN_20;
+   wire [15:0] XLXN_66;
+   wire [15:0] XLXN_68;
+   wire [15:0] XLXN_69;
+   wire [15:0] XLXN_77;
+   wire [15:0] XLXN_79;
+   wire [15:0] XLXN_110;
+   wire [15:0] XLXN_111;
+   wire [15:0] XLXN_115;
+   wire [15:0] XLXN_116;
+   wire [15:0] XLXN_147;
+   wire [15:0] XLXN_148;
+   wire [15:0] XLXN_151;
+   wire [15:0] XLXN_187;
+   wire [15:0] XLXN_188;
+   wire XLXN_191;
+   wire XLXN_199;
+   wire [1:0] XLXN_216;
+   wire XLXN_223;
+   wire [15:0] XLXN_232;
+   wire [15:0] XLXN_233;
+   wire XLXN_234;
+   wire ZERO;
+   wire [15:0] BOutput_DUMMY;
+   wire C_MRead_DUMMY;
+   wire [15:0] instruction_DUMMY;
+   wire C_IRWrite_DUMMY;
+   wire [15:0] AOutput_DUMMY;
+   wire C_SPWrite_DUMMY;
+   wire C_Branch_DUMMY;
+   wire C_AWrite_DUMMY;
+   wire C_ALUInA_DUMMY;
+   wire [1:0] C_ALUInB_DUMMY;
+   wire C_ALUOutWrite_DUMMY;
+   wire [15:0] XLXN_185_DUMMY;
+   wire C_BWrite_DUMMY;
+   wire C_PCWrite_DUMMY;
+   wire [1:0] C_RFWA_DUMMY;
+   wire [1:0] C_PCSrc_DUMMY;
+   wire [2:0] C_RFWD_DUMMY;
+   wire C_MDin_DUMMY;
+   wire C_RFRead_DUMMY;
+   wire [3:0] C_ALUOp_DUMMY;
+   wire [1:0] C_MAddr_DUMMY;
+   wire C_RDWrite_DUMMY;
+   wire [15:0] PCVal_DUMMY;
+   wire [15:0] ALUOutResult_DUMMY;
+   wire [15:0] MemoryOut_DUMMY;
+   wire [15:0] MemoryAddress_DUMMY;
+   wire C_MWrite_DUMMY;
+   wire C_PshPop_DUMMY;
+   
+   assign XLXN_77 = 16'h0001;
+   assign XLXN_79 = 16'hFFFF;
+   assign XLXN_115 = 16'h0000;
+   assign XLXN_116 = 16'h0002;
+   assign ALUOutResult[15:0] = ALUOutResult_DUMMY[15:0];
+   assign AOutput[15:0] = AOutput_DUMMY[15:0];
+   assign BOutput[15:0] = BOutput_DUMMY[15:0];
+   assign C_ALUInA = C_ALUInA_DUMMY;
+   assign C_ALUInB[1:0] = C_ALUInB_DUMMY[1:0];
+   assign C_ALUOp[3:0] = C_ALUOp_DUMMY[3:0];
+   assign C_ALUOutWrite = C_ALUOutWrite_DUMMY;
+   assign C_AWrite = C_AWrite_DUMMY;
+   assign C_Branch = C_Branch_DUMMY;
+   assign C_BWrite = C_BWrite_DUMMY;
+   assign C_IRWrite = C_IRWrite_DUMMY;
+   assign C_MAddr[1:0] = C_MAddr_DUMMY[1:0];
+   assign C_MDin = C_MDin_DUMMY;
+   assign C_MRead = C_MRead_DUMMY;
+   assign C_MWrite = C_MWrite_DUMMY;
+   assign C_PCSrc[1:0] = C_PCSrc_DUMMY[1:0];
+   assign C_PCWrite = C_PCWrite_DUMMY;
+   assign C_PshPop = C_PshPop_DUMMY;
+   assign C_RDWrite = C_RDWrite_DUMMY;
+   assign C_RFRead = C_RFRead_DUMMY;
+   assign C_RFWA[1:0] = C_RFWA_DUMMY[1:0];
+   assign C_RFWD[2:0] = C_RFWD_DUMMY[2:0];
+   assign C_SPWrite = C_SPWrite_DUMMY;
+   assign instruction[15:0] = instruction_DUMMY[15:0];
+   assign MemoryAddress[15:0] = MemoryAddress_DUMMY[15:0];
+   assign MemoryOut[15:0] = MemoryOut_DUMMY[15:0];
+   assign PCVal[15:0] = PCVal_DUMMY[15:0];
+   assign XLXN_185[15:0] = XLXN_185_DUMMY[15:0];
+   reg16  A (.CLK(CLK), 
+            .I(AOutput_DUMMY[15:0]), 
+            .Write(C_AWrite_DUMMY), 
+            .O(XLXN_147[15:0]));
+   reg16  ALUOut (.CLK(CLK), 
+                 .I(ALUOutResult_DUMMY[15:0]), 
+                 .Write(C_ALUOutWrite_DUMMY), 
+                 .O(XLXN_110[15:0]));
+   reg16  B (.CLK(CLK), 
+            .I(BOutput_DUMMY[15:0]), 
+            .Write(C_BWrite_DUMMY), 
+            .O(XLXN_20[15:0]));
+   reg16  InstructionRegister (.CLK(CLK), 
+                              .I(MemoryOut_DUMMY[15:0]), 
+                              .Write(C_IRWrite_DUMMY), 
+                              .O(instruction_DUMMY[15:0]));
+   reg16  StackPointer (.CLK(CLK), 
+                       .I(XLXN_69[15:0]), 
+                       .Write(C_SPWrite_DUMMY), 
+                       .O(XLXN_66[15:0]));
+   Addby2  XLXI_3 (.oldPC(PCVal_DUMMY[15:0]), 
+                  .nextPC(XLXN_10[15:0]));
+   ALUSourceBMux  XLXI_8 (.ALUSrcB(C_ALUInB_DUMMY[1:0]), 
+                         .One(XLXN_115[15:0]), 
+                         .Three(instruction_DUMMY[15:0]), 
+                         .Two(XLXN_116[15:0]), 
+                         .Zero(XLXN_20[15:0]), 
+                         .r(XLXN_151[15:0]));
+   MemoryAddressSelector  XLXI_11 (.MAddr(C_MAddr_DUMMY[1:0]), 
+                                  .One(PCVal_DUMMY[15:0]), 
+                                  .Three(AOutput_DUMMY[15:0]), 
+                                  .Two(XLXN_185_DUMMY[15:0]), 
+                                  .Zero(ALUOutResult_DUMMY[15:0]), 
+                                  .r(MemoryAddress_DUMMY[15:0]));
+   AluTheGOD  XLXI_71 (.CLK(CLK), 
+                      .Opcode(instruction_DUMMY[15:12]), 
+                      .ALUInA(C_ALUInA_DUMMY), 
+                      .ALUInB(C_ALUInB_DUMMY[1:0]), 
+                      .ALUOp(C_ALUOp_DUMMY[3:0]), 
+                      .ALUOutWrite(C_ALUOutWrite_DUMMY), 
+                      .AWrite(C_AWrite_DUMMY), 
+                      .Branch(C_Branch_DUMMY), 
+                      .BWrite(C_BWrite_DUMMY), 
+                      .CrtState(C_DEBUG_NextState[3:0]), 
+                      .IRWrite(C_IRWrite_DUMMY), 
+                      .MAddr(C_MAddr_DUMMY[1:0]), 
+                      .MDin(C_MDin_DUMMY), 
+                      .MRead(C_MRead_DUMMY), 
+                      .MWrite(C_MWrite_DUMMY), 
+                      .PCSrc(C_PCSrc_DUMMY[1:0]), 
+                      .PCWrite(C_PCWrite_DUMMY), 
+                      .PshPop(C_PshPop_DUMMY), 
+                      .RDWrite(C_RDWrite_DUMMY), 
+                      .RFRead(C_RFRead_DUMMY), 
+                      .RFWA(C_RFWA_DUMMY[1:0]), 
+                      .RFWD(C_RFWD_DUMMY[2:0]), 
+                      .SPRel(C_SPRel), 
+                      .SPWrite(C_SPWrite_DUMMY));
+   RegisterFileDataInputMux  XLXI_105 (.Five(XLXN_7[15:0]), 
+                                      .Four(XLXN_111[15:0]), 
+                                      .One(XLXN_10[15:0]), 
+                                      .RFWD(C_RFWD_DUMMY[2:0]), 
+                                      .Three(XLXN_110[15:0]), 
+                                      .Two(AOutput_DUMMY[15:0]), 
+                                      .Zero(MemoryOut_DUMMY[15:0]), 
+                                      .r(XLXN_7[15:0]));
+   RegisterFileWriteAddressMux  XLXI_108 
+         (.InstructionRegister(instruction_DUMMY[11:8]), 
+                                         .RFWA(C_RFWA_DUMMY[1:0]), 
+                                         .r(XLXN_8[3:0]));
+   ZeroExtender  XLXI_111 (.compareIn(XLXN_216[1:0]), 
+                          .cmp(cmp[15:0]));
+   ZE44  XLXI_113 (.instruction(instruction_DUMMY[11:0]), 
+                  .lolWut(XLXN_111[15:0]));
+   adder  XLXI_114 (.A(XLXN_68[15:0]), 
+                   .B(XLXN_66[15:0]), 
+                   .CLK(CLK), 
+                   .r(XLXN_69[15:0]));
+   FORCEMSB0  XLXI_115 (.notForced(XLXN_148[15:0]), 
+                       .forced(XLXN_232[15:0]));
+   ALUSourceBMux  XLXI_117 (.ALUSrcB(C_PCSrc_DUMMY[1:0]), 
+                           .One(XLXN_10[15:0]), 
+                           .Three(AOutput_DUMMY[15:0]), 
+                           .Two(BOutput_DUMMY[15:0]), 
+                           .Zero(XLXN_233[15:0]), 
+                           .r(XLXN_148[15:0]));
+   RegisterFile  XLXI_118 (.AAddress(instruction_DUMMY[7:4]), 
+                          .BAddress(instruction_DUMMY[3:0]), 
+                          .clk(CLK), 
+                          .DataIn(XLXN_7[15:0]), 
+                          .RegRead(C_RFRead_DUMMY), 
+                          .RegWrite(C_RDWrite_DUMMY), 
+                          .WriteAddress(XLXN_8[3:0]), 
+                          .A(AOutput_DUMMY[15:0]), 
+                          .B(BOutput_DUMMY[15:0]));
+   memory  XLXI_123 (.addra(MemoryAddress_DUMMY[14:0]), 
+                    .clka(CLK), 
+                    .dina(XLXN_188[15:0]), 
+                    .ena(C_MRead_DUMMY), 
+                    .wea(C_MWrite_DUMMY), 
+                    .douta(MemoryOut_DUMMY[15:0]));
+   twoInputMux  XLXI_128 (.One(XLXN_79[15:0]), 
+                         .SelectorBit(C_PshPop_DUMMY), 
+                         .Zero(XLXN_77[15:0]), 
+                         .R(XLXN_68[15:0]));
+   twoInputMux  XLXI_129 (.One(XLXN_69[15:0]), 
+                         .SelectorBit(C_PshPop_DUMMY), 
+                         .Zero(XLXN_66[15:0]), 
+                         .R(XLXN_185_DUMMY[15:0]));
+   twoInputMux  XLXI_130 (.One(cmp[15:0]), 
+                         .SelectorBit(C_ALUInA_DUMMY), 
+                         .Zero(XLXN_147[15:0]), 
+                         .R(XLXN_187[15:0]));
+   twoInputMux  XLXI_131 (.One(AOutput_DUMMY[15:0]), 
+                         .SelectorBit(C_MDin_DUMMY), 
+                         .Zero(BOutput_DUMMY[15:0]), 
+                         .R(XLXN_188[15:0]));
+   AND2  XLXI_133 (.I0(C_Branch_DUMMY), 
+                  .I1(XLXN_234), 
+                  .O(XLXN_199));
+   OR2  XLXI_134 (.I0(C_PCWrite_DUMMY), 
+                 .I1(XLXN_199), 
+                 .O(XLXN_191));
+   GND  XLXI_153 (.G(XLXN_223));
+   (* HU_SET = "XLXI_155_0" *) 
+   FD16RE_MXILINX_TopLevel  XLXI_155 (.C(CLK), 
+                                     .CE(XLXN_191), 
+                                     .D(XLXN_232[15:0]), 
+                                     .R(XLXN_223), 
+                                     .Q(PCVal_DUMMY[15:0]));
+   ALU  XLXI_156 (.a(XLXN_187[15:0]), 
+                 .b(XLXN_151[15:0]), 
+                 .clk(CLK), 
+                 .opcode(C_ALUOp_DUMMY[3:0]), 
+                 .compareVal(XLXN_216[1:0]), 
+                 .cout(), 
+                 .error(), 
+                 .r(ALUOutResult_DUMMY[15:0]), 
+                 .zero(ZERO));
+   (* HU_SET = "XLXI_157_1" *) 
+   IFD_MXILINX_TopLevel #( .INIT(1'b0) ) XLXI_157 (.C(CLK), 
+                                  .D(ZERO), 
+                                  .Q(XLXN_234));
+   subByOne  XLXI_159 (.oldValue(AOutput_DUMMY[15:0]), 
+                      .result());
+endmodule

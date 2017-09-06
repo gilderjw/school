@@ -1,0 +1,7 @@
+verilog work "reg16.vf"
+verilog work "ipcore_dir/memory.v"
+verilog work "AluTheGOD.v"
+verilog work "Addby2.v"
+verilog work "TEST_PCMemControl.vf"
+verilog work "Test_PC_MemControl.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

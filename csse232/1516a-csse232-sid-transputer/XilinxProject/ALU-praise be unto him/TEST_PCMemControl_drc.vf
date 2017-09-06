@@ -1,0 +1,116 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : TEST_PCMemControl_drc.vf
+// /___/   /\     Timestamp : 11/03/2015 18:51:04
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/sch2hdl -sympath "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ipcore_dir" -intstyle ise -family spartan3e -verilog TEST_PCMemControl_drc.vf -w "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TEST_PCMemControl.sch"
+//Design Name: TEST_PCMemControl
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module TEST_PCMemControl(clk, 
+                         comparison, 
+                         wea, 
+                         Write, 
+                         AluInA, 
+                         AluInN, 
+                         aluop, 
+                         AluOutWrite, 
+                         AWrite, 
+                         branch, 
+                         BWrite, 
+                         MAddr, 
+                         MDin, 
+                         MRead, 
+                         MWrite, 
+                         pcSrc, 
+                         pcWrite, 
+                         PshPop, 
+                         RDWrite, 
+                         RFRead, 
+                         RFWA, 
+                         RFWD, 
+                         spRel, 
+                         SPWrite);
+
+    input clk;
+    input comparison;
+    input wea;
+    input Write;
+   output AluInA;
+   output [1:0] AluInN;
+   output [3:0] aluop;
+   output AluOutWrite;
+   output AWrite;
+   output branch;
+   output BWrite;
+   output [1:0] MAddr;
+   output MDin;
+   output MRead;
+   output MWrite;
+   output [1:0] pcSrc;
+   output pcWrite;
+   output PshPop;
+   output RDWrite;
+   output RFRead;
+   output [1:0] RFWA;
+   output [2:0] RFWD;
+   output spRel;
+   output SPWrite;
+   
+   wire [15:0] d2a;
+   wire [15:0] PC;
+   wire [15:0] XLXN_2;
+   
+   AluTheGOD  XLXI_1 (.CLK(clk), 
+                     .Comparison(comparison), 
+                     .Opcode(d2a[15:12]), 
+                     .ALUInA(AluInA), 
+                     .ALUInB(AluInN[1:0]), 
+                     .ALUOp(aluop[3:0]), 
+                     .ALUOutWrite(AluOutWrite), 
+                     .AWrite(AWrite), 
+                     .Branch(branch), 
+                     .BWrite(BWrite), 
+                     .MAddr(MAddr[1:0]), 
+                     .MDin(MDin), 
+                     .MRead(MRead), 
+                     .MWrite(MWrite), 
+                     .PCSrc(pcSrc[1:0]), 
+                     .PCWrite(pcWrite), 
+                     .PshPop(PshPop), 
+                     .RDWrite(RDWrite), 
+                     .RFRead(RFRead), 
+                     .RFWA(RFWA[1:0]), 
+                     .RFWD(RFWD[2:0]), 
+                     .SPRel(spRel), 
+                     .SPWrite(SPWrite));
+   reg16  XLXI_2 (.CLK(clk), 
+                 .I(XLXN_2[15:0]), 
+                 .Write(Write), 
+                 .O(PC[15:0]));
+   Addby2  XLXI_3 (.oldPC(PC[15:0]), 
+                  .nextPC(XLXN_2[15:0]));
+   memory  XLXI_4 (.addra(PC[14:0]), 
+                  .addrb(), 
+                  .clka(clk), 
+                  .clkb(), 
+                  .dina(), 
+                  .dinb(), 
+                  .wea(wea), 
+                  .web(), 
+                  .douta(d2a[15:0]), 
+                  .doutb());
+endmodule

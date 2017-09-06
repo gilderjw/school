@@ -1,0 +1,15 @@
+[Inputs]
+clk
+RegWrite
+RegRead
+=AAddress[3:0]=
+=BAddress[3:0]=
+=WriteAddress[3:0]=
+=DataIn[15:0]=
+[Outputs]
+=A[15:0]=
+=B[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel RegisterFile
+

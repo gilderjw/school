@@ -1,0 +1,9 @@
+jim gildersleeve and brian suchy
+Enter your written solution to exercise 4.18 in this file.
+Be sure to include your name and section number in this document.
+
+A) It will run alright, can be faster with more kernel threads to saturate all the cores, since not saturated, some cores will be idle
+
+B) optimal saturated cores is the fastest you can do as long as no threads get blocked, if one gets blocked, one more would be optimal
+
+C) still good, if one thread is blocked, another can run. But it will be suboptimal because contact switching is needed and is wasted overhead

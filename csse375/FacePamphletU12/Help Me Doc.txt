@@ -1,0 +1,16 @@
+Here is a quick overview of how the image attachment system works.
+
+First you need to add an attachment:
+
+Write the full image location in the textbox above add attachment.
+	Here are a couple examples of what they should look like they will be a little
+	different on your computer.
+	(C:\Users\schaffqg\Desktop\CSSE374\FacePamphletU12\images\Koala.jpg)
+	(C:\Users\schaffqg\Desktop\CSSE374\FacePamphletU12\images\small.png)
+	(C:\Users\schaffqg\Desktop\CSSE374\FacePamphletU12\images\Penguins)
+
+Then click the add atachment button. This sets the typed in file as the current attachment
+
+When you create a comment or a new status it will look to see if there is a curr attachment
+
+If there is one, then it will print that information into the status/comment.

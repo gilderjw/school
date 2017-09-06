@@ -1,0 +1,156 @@
+var _user$project$Subscriptions$handleUp = function (state) {
+	var _p0 = state;
+	_v0_16:
+	do {
+		switch (_p0._0) {
+			case 65:
+				switch (_p0._1.ctor) {
+					case 'Left':
+						return _user$project$Types$Key(_user$project$Types$None);
+					case 'UpLeft':
+						return _user$project$Types$Key(_user$project$Types$Up);
+					case 'DownLeft':
+						return _user$project$Types$Key(_user$project$Types$Down);
+					default:
+						break _v0_16;
+				}
+			case 68:
+				switch (_p0._1.ctor) {
+					case 'Right':
+						return _user$project$Types$Key(_user$project$Types$None);
+					case 'UpRight':
+						return _user$project$Types$Key(_user$project$Types$Up);
+					case 'DownRight':
+						return _user$project$Types$Key(_user$project$Types$Down);
+					default:
+						break _v0_16;
+				}
+			case 87:
+				switch (_p0._1.ctor) {
+					case 'Up':
+						return _user$project$Types$Key(_user$project$Types$None);
+					case 'UpLeft':
+						return _user$project$Types$Key(_user$project$Types$Left);
+					case 'UpRight':
+						return _user$project$Types$Key(_user$project$Types$Right);
+					default:
+						break _v0_16;
+				}
+			case 83:
+				switch (_p0._1.ctor) {
+					case 'Down':
+						return _user$project$Types$Key(_user$project$Types$None);
+					case 'DownLeft':
+						return _user$project$Types$Key(_user$project$Types$Left);
+					case 'DownRight':
+						return _user$project$Types$Key(_user$project$Types$Right);
+					default:
+						break _v0_16;
+				}
+			case 49:
+				return _user$project$Types$Key(_user$project$Types$None);
+			case 50:
+				return _user$project$Types$Key(_user$project$Types$None);
+			case 51:
+				return _user$project$Types$Key(_user$project$Types$None);
+			case 52:
+				return _user$project$Types$Key(_user$project$Types$None);
+			default:
+				break _v0_16;
+		}
+	} while(false);
+	return _user$project$Types$Key(_p0._1);
+};
+var _user$project$Subscriptions$handleDown = function (state) {
+	var _p1 = state;
+	_v1_17:
+	do {
+		switch (_p1._0) {
+			case 87:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$Types$Key(_user$project$Types$Up);
+					case 'Left':
+						return _user$project$Types$Key(_user$project$Types$UpLeft);
+					case 'Right':
+						return _user$project$Types$Key(_user$project$Types$UpRight);
+					default:
+						break _v1_17;
+				}
+			case 83:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$Types$Key(_user$project$Types$Down);
+					case 'Left':
+						return _user$project$Types$Key(_user$project$Types$DownLeft);
+					case 'Right':
+						return _user$project$Types$Key(_user$project$Types$DownRight);
+					default:
+						break _v1_17;
+				}
+			case 65:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$Types$Key(_user$project$Types$Left);
+					case 'Up':
+						return _user$project$Types$Key(_user$project$Types$UpLeft);
+					case 'Down':
+						return _user$project$Types$Key(_user$project$Types$DownLeft);
+					default:
+						break _v1_17;
+				}
+			case 68:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$Types$Key(_user$project$Types$Right);
+					case 'Up':
+						return _user$project$Types$Key(_user$project$Types$UpRight);
+					case 'Down':
+						return _user$project$Types$Key(_user$project$Types$DownRight);
+					default:
+						break _v1_17;
+				}
+			case 32:
+				return _user$project$Types$Key(_user$project$Types$Shoot);
+			case 49:
+				return _user$project$Types$Key(_user$project$Types$One);
+			case 50:
+				return _user$project$Types$Key(_user$project$Types$Two);
+			case 51:
+				return _user$project$Types$Key(_user$project$Types$Three);
+			case 52:
+				return _user$project$Types$Key(_user$project$Types$Four);
+			default:
+				break _v1_17;
+		}
+	} while(false);
+	return _user$project$Types$Key(_p1._1);
+};
+var _user$project$Subscriptions$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$batch(
+		{
+			ctor: '::',
+			_0: _elm_lang$keyboard$Keyboard$downs(
+				function (k) {
+					return _user$project$Subscriptions$handleDown(
+						{ctor: '_Tuple2', _0: k, _1: model.key});
+				}),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$keyboard$Keyboard$ups(
+					function (k) {
+						return _user$project$Subscriptions$handleUp(
+							{ctor: '_Tuple2', _0: k, _1: model.key});
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(_elm_lang$core$Time$every, _elm_lang$core$Time$second / 60, _user$project$Types$Tick),
+					_1: {
+						ctor: '::',
+						_0: A2(_elm_lang$core$Time$every, _elm_lang$core$Time$second, _user$project$Types$Tock),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};

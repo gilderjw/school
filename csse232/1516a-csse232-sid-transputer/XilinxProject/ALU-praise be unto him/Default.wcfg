@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TopLevel_TopLevel_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TopLevel_TopLevel_sch_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/BOutput" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BOutput[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BOutput[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/instruction" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group103" type="group">
+      <obj_property name="label">control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_RFWA" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">C_RFWA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">C_RFWA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_ALUInB" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">C_ALUInB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">C_ALUInB[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_ALUOp" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">C_ALUOp[3:0]</obj_property>
+         <obj_property name="ObjectShortName">C_ALUOp[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_RFWD" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">C_RFWD[2:0]</obj_property>
+         <obj_property name="ObjectShortName">C_RFWD[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_IRWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_IRWrite</obj_property>
+         <obj_property name="ObjectShortName">C_IRWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_PCWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_PCWrite</obj_property>
+         <obj_property name="ObjectShortName">C_PCWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_MDin" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_MDin</obj_property>
+         <obj_property name="ObjectShortName">C_MDin</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_MRead" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_MRead</obj_property>
+         <obj_property name="ObjectShortName">C_MRead</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_MWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_MWrite</obj_property>
+         <obj_property name="ObjectShortName">C_MWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_RFRead" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_RFRead</obj_property>
+         <obj_property name="ObjectShortName">C_RFRead</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_RDWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_RDWrite</obj_property>
+         <obj_property name="ObjectShortName">C_RDWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_SPWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_SPWrite</obj_property>
+         <obj_property name="ObjectShortName">C_SPWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_AWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_AWrite</obj_property>
+         <obj_property name="ObjectShortName">C_AWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_BWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_BWrite</obj_property>
+         <obj_property name="ObjectShortName">C_BWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_ALUInA" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_ALUInA</obj_property>
+         <obj_property name="ObjectShortName">C_ALUInA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_ALUOutWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_ALUOutWrite</obj_property>
+         <obj_property name="ObjectShortName">C_ALUOutWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_156/compareVal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">compareVal[1:0]</obj_property>
+         <obj_property name="ObjectShortName">compareVal[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_Branch" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_Branch</obj_property>
+         <obj_property name="ObjectShortName">C_Branch</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_156/zero" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">zero</obj_property>
+         <obj_property name="ObjectShortName">zero</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_SPRel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_SPRel</obj_property>
+         <obj_property name="ObjectShortName">C_SPRel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_PshPop" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C_PshPop</obj_property>
+         <obj_property name="ObjectShortName">C_PshPop</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_PCSrc" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">C_PCSrc[1:0]</obj_property>
+         <obj_property name="ObjectShortName">C_PCSrc[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/C_MAddr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">C_MAddr[1:0]</obj_property>
+         <obj_property name="ObjectShortName">C_MAddr[1:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group102" type="group">
+      <obj_property name="label">register file</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/AAddress" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">AAddress[3:0]</obj_property>
+         <obj_property name="ObjectShortName">AAddress[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/BAddress" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">BAddress[3:0]</obj_property>
+         <obj_property name="ObjectShortName">BAddress[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/WriteAddress" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">WriteAddress[3:0]</obj_property>
+         <obj_property name="ObjectShortName">WriteAddress[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/RegWrite" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RegWrite</obj_property>
+         <obj_property name="ObjectShortName">RegWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/RegRead" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">RegRead</obj_property>
+         <obj_property name="ObjectShortName">RegRead</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/DataIn" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">DataIn[15:0]</obj_property>
+         <obj_property name="ObjectShortName">DataIn[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/A" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">A[15:0]</obj_property>
+         <obj_property name="ObjectShortName">A[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/B" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">B[15:0]</obj_property>
+         <obj_property name="ObjectShortName">B[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/One" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+         <obj_property name="label">RET</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Two" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Two[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Two[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Three" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Three[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Three[15:0]</obj_property>
+         <obj_property name="label">P0</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Four" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Four[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Four[15:0]</obj_property>
+         <obj_property name="label">P1</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Five" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Five[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Five[15:0]</obj_property>
+         <obj_property name="label">T0</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Six" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Six[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Six[15:0]</obj_property>
+         <obj_property name="label">T1</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Seven" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Seven[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Seven[15:0]</obj_property>
+         <obj_property name="label">T2</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Eight" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Eight[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Eight[15:0]</obj_property>
+         <obj_property name="label">T3</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Nine" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Nine[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Nine[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Ten" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Ten[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Ten[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Eleven" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Eleven[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Eleven[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Twelve" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Twelve[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Twelve[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Thirteen" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Thirteen[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Thirteen[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Fourteen" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Fourteen[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Fourteen[15:0]</obj_property>
+         <obj_property name="label">S0</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Fifteen" type="array" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Fifteen[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Fifteen[15:0]</obj_property>
+         <obj_property name="label">S1</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group142" type="group">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_156/a" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">a[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_156/b" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">b[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_156/opcode" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+         <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_156/r" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/MemoryOut" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MemoryOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MemoryOut[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/MemoryAddress" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MemoryAddress[15:0]</obj_property>
+      <obj_property name="ObjectShortName">MemoryAddress[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/PCVal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PCVal[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PCVal[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/ALUOutResult" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUOutResult[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOutResult[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/AOutput" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">AOutput[15:0]</obj_property>
+      <obj_property name="ObjectShortName">AOutput[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_71/CurrentState" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CurrentState[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CurrentState[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group47" type="group">
+      <obj_property name="label">2InputMuxes</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_128/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_128/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_128/SelectorBit" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SelectorBit</obj_property>
+         <obj_property name="ObjectShortName">SelectorBit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_128/R" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">R[15:0]</obj_property>
+         <obj_property name="ObjectShortName">R[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_129/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_129/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_129/SelectorBit" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SelectorBit</obj_property>
+         <obj_property name="ObjectShortName">SelectorBit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_129/R" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">R[15:0]</obj_property>
+         <obj_property name="ObjectShortName">R[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/SelectorBit" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SelectorBit</obj_property>
+         <obj_property name="ObjectShortName">SelectorBit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/R" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">R[15:0]</obj_property>
+         <obj_property name="ObjectShortName">R[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_131/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_131/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_131/SelectorBit" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SelectorBit</obj_property>
+         <obj_property name="ObjectShortName">SelectorBit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_131/R" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">R[15:0]</obj_property>
+         <obj_property name="ObjectShortName">R[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group133" type="group">
+      <obj_property name="label">PC Source Data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_117/ALUSrcB" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALUSrcB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUSrcB[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_117/Three" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Three[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Three[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_117/Two" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Two[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Two[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_117/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_117/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_117/r" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group126" type="group">
+      <obj_property name="label">PC Register</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_155/C" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">C</obj_property>
+         <obj_property name="ObjectShortName">C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_133/O" type="logic" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">O</obj_property>
+         <obj_property name="ObjectShortName">O</obj_property>
+         <obj_property name="label">AND</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_134/O" type="logic" db_ref_id="1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">O</obj_property>
+         <obj_property name="ObjectShortName">O</obj_property>
+         <obj_property name="label">OR</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_155/CE" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">CE</obj_property>
+         <obj_property name="ObjectShortName">CE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_155/D" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">D[15:0]</obj_property>
+         <obj_property name="ObjectShortName">D[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_155/R" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">R</obj_property>
+         <obj_property name="ObjectShortName">R</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_155/Q" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Q[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/ALUOut/O" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">O[15:0]</obj_property>
+      <obj_property name="ObjectShortName">O[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="group143" type="group">
+      <obj_property name="label">RegisterFile</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Two" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Two[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Two[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Three" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Three[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Three[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Four" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Four[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Four[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Five" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Five[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Five[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Six" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Six[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Six[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Seven" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Seven[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Seven[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Eight" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Eight[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Eight[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Nine" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Nine[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Nine[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Ten" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Ten[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Ten[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Eleven" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Eleven[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Eleven[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Twelve" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Twelve[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Twelve[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Thirteen" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Thirteen[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Thirteen[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Fourteen" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Fourteen[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Fourteen[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_118/Fifteen" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Fifteen[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Fifteen[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group149" type="group">
+      <obj_property name="label">130</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/SelectorBit" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SelectorBit</obj_property>
+         <obj_property name="ObjectShortName">SelectorBit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_130/R" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">R[15:0]</obj_property>
+         <obj_property name="ObjectShortName">R[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group156" type="group">
+      <obj_property name="label">ALUSRB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_8/ALUSrcB" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALUSrcB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUSrcB[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_8/Three" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Three[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Three[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_8/Two" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Two[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Two[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_8/One" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">One[15:0]</obj_property>
+         <obj_property name="ObjectShortName">One[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_8/Zero" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">Zero[15:0]</obj_property>
+         <obj_property name="ObjectShortName">Zero[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TopLevel_TopLevel_sch_tb/UUT/XLXI_8/r" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">r[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

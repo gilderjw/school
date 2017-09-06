@@ -1,0 +1,8 @@
+[Inputs]
+=oldPC[15:0]=
+[Outputs]
+=nextPC[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Addby2
+

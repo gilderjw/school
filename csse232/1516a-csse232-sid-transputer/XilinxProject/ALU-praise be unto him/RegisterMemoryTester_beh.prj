@@ -1,0 +1,4 @@
+verilog work "RegisterFile.v"
+verilog work "ipcore_dir/memory.v"
+verilog work "RegisterMemoryTester.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

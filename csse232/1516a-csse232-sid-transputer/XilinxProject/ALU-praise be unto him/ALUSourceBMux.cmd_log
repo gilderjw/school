@@ -1,0 +1,8 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALUSourceBMux.v} -lang verilog -prj AluTheGOD -o ALUSourceBMux.spl -module ALUSourceBMux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALUSourceBMux.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALUSourceBMux.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALUSourceBMux.v} -lang verilog -prj AluTheGOD -o ALUSourceBMux.spl -module ALUSourceBMux -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALUSourceBMux.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALUSourceBMux.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALUSourceBMux.v} -lang verilog -prj AluTheGOD -o ALUSourceBMux.spl -module ALUSourceBMux -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALUSourceBMux.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALUSourceBMux.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALUSourceBMux.v} -lang verilog -prj AluTheGOD -o ALUSourceBMux.spl -module ALUSourceBMux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALUSourceBMux.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALUSourceBMux.sym} 

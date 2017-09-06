@@ -1,0 +1,2 @@
+vhdtdtfi -lib work /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxLabs/memory/BlockMemoryContrl.v -lang verilog -prj memory -o MIPS_control_unit.spl -module MIPS_control_unit -template /opt/Xilinx/13.4/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e MIPS_control_unit.spl /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxLabs/memory/MIPS_control_unit.sym 

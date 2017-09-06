@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/suchyb/Desktop/AluTheGOD/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/suchyb/Desktop/AluTheGOD/xst"
+elaborate
+-ifn Test_ALU.prj
+-ifmt mixed

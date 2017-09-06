@@ -1,0 +1,28 @@
+var _user$project$ElmFinalGame_Types$Model = F9(
+	function (a, b, c, d, e, f, g, h, i) {
+		return {x: a, y: b, key: c, vel: d, bullets: e, lastTime: f, width: g, height: h, enemies: i};
+	});
+var _user$project$ElmFinalGame_Types$Tick = function (a) {
+	return {ctor: 'Tick', _0: a};
+};
+var _user$project$ElmFinalGame_Types$Key = function (a) {
+	return {ctor: 'Key', _0: a};
+};
+var _user$project$ElmFinalGame_Types$None = {ctor: 'None'};
+var _user$project$ElmFinalGame_Types$Shoot = {ctor: 'Shoot'};
+var _user$project$ElmFinalGame_Types$DownLeft = {ctor: 'DownLeft'};
+var _user$project$ElmFinalGame_Types$DownRight = {ctor: 'DownRight'};
+var _user$project$ElmFinalGame_Types$UpLeft = {ctor: 'UpLeft'};
+var _user$project$ElmFinalGame_Types$UpRight = {ctor: 'UpRight'};
+var _user$project$ElmFinalGame_Types$Down = {ctor: 'Down'};
+var _user$project$ElmFinalGame_Types$Up = {ctor: 'Up'};
+var _user$project$ElmFinalGame_Types$Right = {ctor: 'Right'};
+var _user$project$ElmFinalGame_Types$Left = {ctor: 'Left'};
+var _user$project$ElmFinalGame_Types$BUpdater = F2(
+	function (a, b) {
+		return {ctor: 'BUpdater', _0: a, _1: b};
+	});
+var _user$project$ElmFinalGame_Types$EnemyUpdater = F2(
+	function (a, b) {
+		return {ctor: 'EnemyUpdater', _0: a, _1: b};
+	});

@@ -1,0 +1,5 @@
+set -tmpdir "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/xst/projnav.tmp"
+set -xsthdpdir "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/xst"
+elaborate
+-ifn ALU.prj
+-ifmt mixed

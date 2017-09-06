@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InstrumentableItems>
+<IJavaProject Info="/Tutorial6">
+<IPackageFragement Info="/Tutorial6/src/Expedia">
+<ICompilationUnit Info="/Tutorial6/src/Expedia/IDatabase.java"/>
+<ICompilationUnit Info="/Tutorial6/src/Expedia/ServiceLocator.java"/>
+<ICompilationUnit Info="/Tutorial6/src/Expedia/Booking.java"/>
+<ICompilationUnit Info="/Tutorial6/src/Expedia/Flight.java"/>
+<ICompilationUnit Info="/Tutorial6/src/Expedia/Discount.java"/>
+<ICompilationUnit Info="/Tutorial6/src/Expedia/User.java"/>
+<ICompilationUnit Info="/Tutorial6/src/Expedia/Car.java"/>
+<ICompilationUnit Info="/Tutorial6/src/Expedia/Hotel.java"/>
+</IPackageFragement>
+</IJavaProject>
+</InstrumentableItems>

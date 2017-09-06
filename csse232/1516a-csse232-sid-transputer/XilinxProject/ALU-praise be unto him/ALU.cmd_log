@@ -1,0 +1,32 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALU.sym} 
+vhdtdtfi -lib work {/home/wangs4/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALU.spl {/home/wangs4/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {/home/wangs4/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {/home/wangs4/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v} -lang verilog -prj AluTheGOD -o ALU.spl -module ALU -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ALU.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.sym} 

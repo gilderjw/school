@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ZE44.v} -lang verilog -prj AluTheGOD -o ZE44.spl -module ZE44 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ZE44.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ZE44.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ZE44.v} -lang verilog -prj AluTheGOD -o ZE44.spl -module ZE44 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ZE44.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/ZE44.sym} 

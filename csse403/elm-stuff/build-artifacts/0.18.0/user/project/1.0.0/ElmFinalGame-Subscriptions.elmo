@@ -1,0 +1,136 @@
+var _user$project$ElmFinalGame_Subscriptions$handleUp = function (state) {
+	var _p0 = state;
+	_v0_12:
+	do {
+		switch (_p0._0) {
+			case 65:
+				switch (_p0._1.ctor) {
+					case 'Left':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$None);
+					case 'UpLeft':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Up);
+					case 'DownLeft':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Down);
+					default:
+						break _v0_12;
+				}
+			case 68:
+				switch (_p0._1.ctor) {
+					case 'Right':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$None);
+					case 'UpRight':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Up);
+					case 'DownRight':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Down);
+					default:
+						break _v0_12;
+				}
+			case 87:
+				switch (_p0._1.ctor) {
+					case 'Up':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$None);
+					case 'UpLeft':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Left);
+					case 'UpRight':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Right);
+					default:
+						break _v0_12;
+				}
+			case 83:
+				switch (_p0._1.ctor) {
+					case 'Down':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$None);
+					case 'DownLeft':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Left);
+					case 'DownRight':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Right);
+					default:
+						break _v0_12;
+				}
+			default:
+				break _v0_12;
+		}
+	} while(false);
+	return _user$project$ElmFinalGame_Types$Key(_p0._1);
+};
+var _user$project$ElmFinalGame_Subscriptions$handleDown = function (state) {
+	var _p1 = state;
+	_v1_13:
+	do {
+		switch (_p1._0) {
+			case 87:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Up);
+					case 'Left':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$UpLeft);
+					case 'Right':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$UpRight);
+					default:
+						break _v1_13;
+				}
+			case 83:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Down);
+					case 'Left':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$DownLeft);
+					case 'Right':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$DownRight);
+					default:
+						break _v1_13;
+				}
+			case 65:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Left);
+					case 'Up':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$UpLeft);
+					case 'Down':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$DownLeft);
+					default:
+						break _v1_13;
+				}
+			case 68:
+				switch (_p1._1.ctor) {
+					case 'None':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Right);
+					case 'Up':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$UpRight);
+					case 'Down':
+						return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$DownRight);
+					default:
+						break _v1_13;
+				}
+			case 32:
+				return _user$project$ElmFinalGame_Types$Key(_user$project$ElmFinalGame_Types$Shoot);
+			default:
+				break _v1_13;
+		}
+	} while(false);
+	return _user$project$ElmFinalGame_Types$Key(_p1._1);
+};
+var _user$project$ElmFinalGame_Subscriptions$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$batch(
+		{
+			ctor: '::',
+			_0: _elm_lang$keyboard$Keyboard$downs(
+				function (k) {
+					return _user$project$ElmFinalGame_Subscriptions$handleDown(
+						{ctor: '_Tuple2', _0: k, _1: model.key});
+				}),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$keyboard$Keyboard$ups(
+					function (k) {
+						return _user$project$ElmFinalGame_Subscriptions$handleUp(
+							{ctor: '_Tuple2', _0: k, _1: model.key});
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(_elm_lang$core$Time$every, _elm_lang$core$Time$second / 60, _user$project$ElmFinalGame_Types$Tick),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};

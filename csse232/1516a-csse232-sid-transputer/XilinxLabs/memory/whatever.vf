@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 13.4
+//  \   \         Application : sch2hdl
+//  /   /         Filename : whatever.vf
+// /___/   /\     Timestamp : 10/13/2015 20:21:44
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxLabs/memory/ipcore_dir -intstyle ise -family spartan3e -verilog /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxLabs/memory/whatever.vf -w /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxLabs/memory/whatever.sch
+//Design Name: whatever
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module whatever(addra, 
+                clock, 
+                dina, 
+                reset, 
+                wea, 
+                alusrc, 
+                branch, 
+                memread, 
+                memToControl, 
+                memtoreg, 
+                memwrite, 
+                regdest, 
+                regwrite);
+
+    input [9:0] addra;
+    input clock;
+    input [15:0] dina;
+    input reset;
+    input wea;
+   output alusrc;
+   output branch;
+   output memread;
+   output [15:0] memToControl;
+   output memtoreg;
+   output memwrite;
+   output regdest;
+   output regwrite;
+   
+   wire [15:0] memToControl_DUMMY;
+   
+   assign memToControl[15:0] = memToControl_DUMMY[15:0];
+   MIPS_control_unit  XLXI_1 (.CLK(clock), 
+                             .Opcode(memToControl_DUMMY[15:10]), 
+                             .Reset(reset), 
+                             .ALUSrc(alusrc), 
+                             .Branch(branch), 
+                             .MemRead(memread), 
+                             .MemtoReg(memtoreg), 
+                             .MemWrite(memwrite), 
+                             .RegDst(regdest), 
+                             .RegWrite(regwrite));
+   blockmemory16kx1  XLXI_2 (.addra(addra[9:0]), 
+                            .clka(clock), 
+                            .dina(dina[15:0]), 
+                            .wea(wea), 
+                            .douta(memToControl_DUMMY[15:0]));
+endmodule

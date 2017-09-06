@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym reg16 {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/work/reg16.sch} {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/reg16.sym} 

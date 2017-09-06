@@ -1,0 +1,6 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/subByOne.v} -lang verilog -prj AluTheGOD -o subByOne.spl -module subByOne -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w subByOne.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/subByOne.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/a.v} -lang verilog -prj AluTheGOD -o subByOne.spl -module subByOne -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w subByOne.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/subByOne.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/subByOne.v} -lang verilog -prj AluTheGOD -o subByOne.spl -module subByOne -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w subByOne.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/subByOne.sym} 

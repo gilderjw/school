@@ -1,0 +1,132 @@
+% :- module(csse403nlp,[parse/2,translate/2]).
+% we should use a module,really, but it wasn't obvious how to
+% make it so the that the operator => displays correctly when it
+% is in a module.
+
+% this creates a new => operator to have the same priority as +
+% seems to make it behave as you would expect.
+:- op(200, xfx, =>).
+=>(_,_).
+
+% your code goes below
+% the tests are in another file
+noun(singular, apple).
+noun(plural, apples).
+
+noun(singular, boy).
+noun(plural, boys).
+
+noun(singular, girl).
+noun(plural, girls).
+
+s2p(girl, girls).
+s2p(boy, boys).
+s2p(apple, apples).
+
+qualifier(_, some).
+qualifier(plural, all).
+
+intransitive_verb(plural, run).
+intransitive_verb(singular, runs).
+intransitive_verb(plural, dance).
+intransitive_verb(singular, dances).
+
+transitive_verb(singular, likes).
+transitive_verb(plural, like).
+transitive_verb(singular, hates).
+transitive_verb(plural, hate).
+transitive_verb(plural, respect).
+transitive_verb(singular, respects).
+
+relative_clause(that).
+relative_clause(which).
+
+%% S --> NP VP    
+statement(X, statement(NP, VP)) :-
+        noun_phrase(SOP, X,NounRemainder, NP),
+        verb_phrase(SOP, NounRemainder,[], VP),!.
+
+%% NP --> Qual RELCL 
+noun_phrase(SOP,[Qualifier|RelClause],Rest, OtherThing) :- 
+	qualifier(SOP, Qualifier),
+	relative_clause_phrase(_,RelClause, Rest, Phrase),
+	OtherThing =.. [Qualifier, Thing],
+	Thing =.. [relcl|Phrase].
+
+%% NP --> Qual Noun 
+noun_phrase(SOP, [Qual,Noun|Rest],Rest, Thing) :- 
+	qualifier(SOP, Qual),
+	noun(SOP,Noun),
+	Thing =.. [Qual, noun(Noun)].
+
+
+
+%% VP --> Int-Verb 
+verb_phrase(SOP,[Verb|Rest], Rest, verb(Verb)) :- 
+	intransitive_verb(SOP,Verb).
+
+%% VP --> Trans-Verb NP
+verb_phrase(SOP,[Verb|NounPhrase], Rest, verb(Verb, Phrase)) :-
+	transitive_verb(SOP,Verb),
+	noun_phrase(_,NounPhrase, Rest, Phrase).
+
+%% RELCL --> Noun Rel VP 
+relative_clause_phrase(SOP,[Noun, Rel|Verb], Rest, [noun(Noun), Phrase]) :-
+	noun(SOP,Noun),
+	relative_clause(Rel),
+	verb_phrase(SOP,Verb, Rest, Phrase).
+
+%% RELCL --> Noun Rel NP Trans-Verb
+relative_clause_phrase(SOP,[Noun, Rel|Stuff], Rest, [noun(Noun), NP, verb(Tverb)]) :-
+	noun(_,Noun),
+	relative_clause(Rel),
+	noun_phrase(SOP, Stuff, [Tverb|Rest], NP),
+	transitive_verb(SOP,Tverb).
+
+parse(X,statement(NP,VP)) :-
+	statement(X, statement(NP, VP)).
+
+make_singular(Noun, Noun) :-
+	s2p(Noun, _).
+
+make_singular(Noun, Output) :-
+	s2p(Output, Noun).
+
+%% main translate
+translate(statement(NT,VT), Output) :-
+	translate(VT, 1, Verb),
+	translate(NT, Verb, Output), !.
+
+%% VP -- Int-Verb
+translate(verb(VP), Number, Output) :-
+	Output =.. [VP, Number].
+
+%% NP -- Qual Noun
+translate(NP, Verb, Output) :-
+	NP =.. [Qual, Lawl],
+	Lawl =.. [noun, Noun],
+	make_singular(Noun, SNoun),
+	NMeme =.. [SNoun, 1],
+	Output =.. [Qual, 1, NMeme=>Verb].
+
+
+pandt(X,Output) :-
+	parse(X,statement(NP,VP)), 
+	translate(statement(NP, VP), Output).
+
+%% statement([all, girl, run]).
+%%  ;
+%% statement([some, girl, run]).
+%%  ;
+%% statement([some, girl, run]).
+%%  ;
+%% statement([some, girl, likes, all, apple]).
+%%  ;
+%% statement([some, boy, that, like, some, apple, run]).
+%%  ;
+%% statement([some, boy, that, hate, some, girl, like, some, apple]).
+%%  ;
+%% statement([all, boy, that, some, boy, like, run]).
+%%  ;
+%% statement([all, boy, like, all, girl, that, like, all, boy]).
+%%  ;

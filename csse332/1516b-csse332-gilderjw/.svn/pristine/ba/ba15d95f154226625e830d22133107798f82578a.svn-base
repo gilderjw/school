@@ -1,0 +1,80 @@
+gilderjw@gilderjw-ThinkPad-W540:~/Documents/csse332/1516b-csse332-gilderjw/lab3/Processes$ ./processes 10 200000 Files.txt
+lineNumber:1
+lineNumber:2
+lineNumber:3
+lineNumber:4
+lineNumber:5
+lineNumber:6
+lineNumber:7
+lineNumber:8
+lineNumber:9
+lineNumber:10
+process number 10:
+ argv[0]  is myCopy
+ argv[1]  is FileTwo.txt
+ argv[2]  is FileTwo_out.txt
+In program myCopy. Have just finished reading from file FileTwo.txt....
+In program myCopy. Have just finished writing to file FileTwo_out.txt .....
+process number 9:
+ argv[0]  is myCopy
+ argv[1]  is �FileOne.txt
+ argv[2]  is �FileOne_out.txt
+�FileOne.txt: No such file or directory
+process number 8:
+ argv[0]  is myCopy
+ argv[1]  is FileFour.txt
+ argv[2]  is FileFour_out.txt
+In program myCopy. Have just finished reading from file FileFour.txt....
+In program myCopy. Have just finished writing to file FileFour_out.txt .....
+process number 7:
+ argv[0]  is myCopy
+ argv[1]  is FileThree.txt
+ argv[2]  is FileThree_out.txt
+In program myCopy. Have just finished reading from file FileThree.txt....
+In program myCopy. Have just finished writing to file FileThree_out.txt .....
+process number 6:
+ argv[0]  is myCopy
+ argv[1]  is FileTwo.txt
+ argv[2]  is FileTwo_out.txt
+In program myCopy. Have just finished reading from file FileTwo.txt....
+In program myCopy. Have just finished writing to file FileTwo_out.txt .....
+process number 5:
+ argv[0]  is myCopy
+ argv[1]  is �FileOne.txt
+ argv[2]  is �FileOne_out.txt
+�FileOne.txt: No such file or directory
+process number 4:
+ argv[0]  is myCopy
+ argv[1]  is FileFour.txt
+ argv[2]  is FileFour_out.txt
+In program myCopy. Have just finished reading from file FileFour.txt....
+In program myCopy. Have just finished writing to file FileFour_out.txt .....
+process number 3:
+ argv[0]  is myCopy
+ argv[1]  is FileThree.txt
+ argv[2]  is FileThree_out.txt
+In program myCopy. Have just finished reading from file FileThree.txt....
+In program myCopy. Have just finished writing to file FileThree_out.txt .....
+process number 2:
+ argv[0]  is myCopy
+ argv[1]  is FileTwo.txt
+ argv[2]  is FileTwo_out.txt
+In program myCopy. Have just finished reading from file FileTwo.txt....
+In program myCopy. Have just finished writing to file FileTwo_out.txt .....
+process number 1:
+ argv[0]  is myCopy
+ argv[1]  is FileOne.txt
+ argv[2]  is FileOne_out.txt
+In program myCopy. Have just finished reading from file FileOne.txt....
+In program myCopy. Have just finished writing to file FileOne_out.txt .....
+Time for process 1 = 1800917 microseconds.
+Time for process 2 = 1800833 microseconds.
+Time for process 3 = 1800779 microseconds.
+Time for process 4 = 1800725 microseconds.
+Time for process 5 = 1800650 microseconds.
+Time for process 6 = 1800596 microseconds.
+Time for process 7 = 1800538 microseconds.
+Time for process 8 = 1800485 microseconds.
+Time for process 9 = 1800418 microseconds.
+Time for process 10 = 1800358 microseconds.
+parent done in: 1800981

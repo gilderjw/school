@@ -1,0 +1,680 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.23)  7 DEC 2016 19:27
+entering extended mode
+**"D:/Documents/Actual Documents/csse304/PrologNLPTwo/nlp.pl"
+("D:/Documents/Actual Documents/csse304/PrologNLPTwo/nlp.pl"
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 :
+     - op(200, xfx, =>).
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no : in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ( in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.9 =>(_
+        ,_).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+! Double subscript.
+l.9 =>(_,_
+          ).
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--10
+[]
+ []
+
+
+Overfull \hbox (9.2778pt too wide) in paragraph at lines 8--10
+[][]\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 n
+      oun(apple).
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 15--19
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 q
+      ualifier(some).
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 20--22
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 i
+      ntransitive_verb(run).
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.23 intransitive_
+                  verb(run).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.25 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (174.2687pt too wide) in paragraph at lines 23--25
+[]$[]\OML/cmm/m/it/10 erb\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 run\OT1/cmr/m/n/10 )
+\OML/cmm/m/it/10 :intransitive[]erb\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 dance\OT1/
+cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 t
+      ransitive_verb(like).
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.26 transitive_
+                verb(like).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.29 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (264.48892pt too wide) in paragraph at lines 26--29
+[]$[]\OML/cmm/m/it/10 erb\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 like\OT1/cmr/m/n/10 
+)\OML/cmm/m/it/10 :transitive[]erb\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 hate\OT1/cm
+r/m/n/10 )\OML/cmm/m/it/10 :transitive[]erb\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 re
+spect\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 r
+      elative_clause(that).
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.30 relative_
+              clause(that).
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.32 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (176.1527pt too wide) in paragraph at lines 30--32
+[]$[]\OML/cmm/m/it/10 lause\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 that\OT1/cmr/m/n/1
+0 )\OML/cmm/m/it/10 :relative[]lause\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 which\OT1
+/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 s
+      tatement(X) :-
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no X in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36         noun_
+                  phrase(X,NounRemainder),
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.38 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--38
+[]
+ []
+
+
+Overfull \hbox (276.1088pt too wide) in paragraph at lines 35--38
+[]\OML/cmm/m/it/10 hrase\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; NounRemainder\OT1/
+cmr/m/n/10 )\OML/cmm/m/it/10 ; verb[]hrase\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Nou
+nRemainder; \OT1/cmr/m/n/10 [])\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 n
+      oun_phrase([Qual,Noun|Rest],Rest) :-
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.40 noun_
+          phrase([Qual,Noun|Rest],Rest) :-
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.43 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (169.4042pt too wide) in paragraph at lines 40--43
+[]$[]\OML/cmm/m/it/10 hrase\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 Qual; Noun\OMS/cm
+sy/m/n/10 j\OML/cmm/m/it/10 Rest\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; Rest\OT1/cm
+r/m/n/10 ) :
+ []
+
+
+Overfull \hbox (142.24992pt too wide) in paragraph at lines 40--43
+\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 qualifier\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Q
+ual\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; noun\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 No
+un\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 n
+      oun_phrase([Qualifier|RelClause],Rest) :-
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.45 noun_
+          phrase([Qualifier|RelClause],Rest) :-
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.49 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (187.84807pt too wide) in paragraph at lines 45--49
+[]$[]\OML/cmm/m/it/10 hrase\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 Qualifier\OMS/cms
+y/m/n/10 j\OML/cmm/m/it/10 RelClause\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; Rest\OT
+1/cmr/m/n/10 ) :
+ []
+
+
+Overfull \hbox (280.49828pt too wide) in paragraph at lines 45--49
+\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 qualifier\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Q
+ualifier\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; relative[]lause[]hrase\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 RelClause; Rest\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 v
+      erb_phrase([Verb|Rest], Rest) :-
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 verb_
+          phrase([Verb|Rest], Rest) :-
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.53 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (138.95692pt too wide) in paragraph at lines 51--53
+[]$[]\OML/cmm/m/it/10 hrase\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 Verb\OMS/cmsy/m/n
+/10 j\OML/cmm/m/it/10 Rest\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; Rest\OT1/cmr/m/n/
+10 ) :
+ []
+
+
+Overfull \hbox (112.80206pt too wide) in paragraph at lines 51--53
+\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 intransitive[]erb\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 Verb\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 v
+      erb_phrase([Verb|NounPhrase], Rest) :-
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.55 verb_
+          phrase([Verb|NounPhrase], Rest) :-
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (177.02066pt too wide) in paragraph at lines 55--58
+[]$[]\OML/cmm/m/it/10 hrase\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 Verb\OMS/cmsy/m/n
+/10 j\OML/cmm/m/it/10 NounPhrase\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; Rest\OT1/cm
+r/m/n/10 ) :
+ []
+
+
+Overfull \hbox (251.71446pt too wide) in paragraph at lines 55--58
+\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 transitive[]erb\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 Verb\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; noun[]hrase\OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 NounPhrase; Rest\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 r
+      elative_clause_phrase([Noun, Rel|Verb], Rest) :-
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.60 relative_
+              clause_phrase([Noun, Rel|Verb], Rest) :-
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.64 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (191.59097pt too wide) in paragraph at lines 60--64
+[]$[]\OML/cmm/m/it/10 lause[]hrase\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 Noun; Rel\
+OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 Verb\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; Rest\
+OT1/cmr/m/n/10 ) :
+ []
+
+
+Overfull \hbox (264.60814pt too wide) in paragraph at lines 60--64
+\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 noun\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Noun\O
+T1/cmr/m/n/10 )\OML/cmm/m/it/10 ; relative[]lause\OT1/cmr/m/n/10 (\OML/cmm/m/it
+/10 Rel\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; verb[]hrase\OT1/cmr/m/n/10 (\OML/cmm
+/m/it/10 Verb; Rest\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 r
+      elative_clause_phrase([Noun, Rel|Stuff], Rest) :-
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.66 relative_
+              clause_phrase([Noun, Rel|Stuff], Rest) :-
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.71 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (197.78665pt too wide) in paragraph at lines 66--71
+[]$[]\OML/cmm/m/it/10 lause[]hrase\OT1/cmr/m/n/10 ([\OML/cmm/m/it/10 Noun; Rel\
+OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 Stuff\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; Rest
+\OT1/cmr/m/n/10 ) :
+ []
+
+
+Overfull \hbox (410.01729pt too wide) in paragraph at lines 66--71
+\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 noun\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Noun\O
+T1/cmr/m/n/10 )\OML/cmm/m/it/10 ; relative[]lause\OT1/cmr/m/n/10 (\OML/cmm/m/it
+/10 Rel\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; noun[]hrase\OT1/cmr/m/n/10 (\OML/cmm
+/m/it/10 Stuff; \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Tverb\OMS/cmsy/m/n/10 j\OML/c
+mm/m/it/10 Rest\OT1/cmr/m/n/10 ])\OML/cmm/m/it/10 ; transitive[]erb\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 Tverb\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :$ 
+ []
+
+)
+! Emergency stop.
+<*> ...tual Documents/csse304/PrologNLPTwo/nlp.pl"
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 10 strings out of 493334
+ 302 string characters out of 3139251
+ 55242 words of memory out of 3000000
+ 3638 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 18i,1n,12p,132b,56s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

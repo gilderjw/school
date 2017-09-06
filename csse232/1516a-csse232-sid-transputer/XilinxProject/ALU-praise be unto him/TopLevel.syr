@@ -1,0 +1,990 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: TopLevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopLevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopLevel"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : TopLevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ZeroExtender.v" in library work
+Compiling verilog file "ZE44.v" in library work
+Module <ZeroExtender> compiled
+Compiling verilog file "reg16.vf" in library work
+Module <ZE44> compiled
+Module <FD16CE_MXILINX_reg16> compiled
+Compiling verilog file "twoInputMux.v" in library work
+Module <reg16> compiled
+Compiling verilog file "subByOne.v" in library work
+Module <twoInputMux> compiled
+Compiling verilog file "RegisterFileWriteAddressMux.v" in library work
+Module <subByOne> compiled
+Compiling verilog file "RegisterFileDataInputMux.v" in library work
+Module <RegisterFileWriteAddressMux> compiled
+Compiling verilog file "RegisterFile.v" in library work
+Module <RegisterFileDataInputMux> compiled
+Compiling verilog file "MemoryAddressSelector.v" in library work
+Module <RegisterFile> compiled
+Compiling verilog file "ipcore_dir/memory.v" in library work
+Module <MemoryAddressSelector> compiled
+Compiling verilog file "FORCEMSB0.v" in library work
+Module <memory> compiled
+Compiling verilog file "AluTheGOD.v" in library work
+Module <FORCEMSB0> compiled
+Compiling verilog file "ALUSourceBMux.v" in library work
+Module <AluTheGOD> compiled
+Compiling verilog file "ALU.v" in library work
+Module <ALUSourceBMux> compiled
+Compiling verilog file "adder.v" in library work
+Module <ALU> compiled
+Compiling verilog file "Addby2.v" in library work
+Module <adder> compiled
+Compiling verilog file "TopLevel.vf" in library work
+Module <Addby2> compiled
+Module <IFD_MXILINX_TopLevel> compiled
+Module <FD16RE_MXILINX_TopLevel> compiled
+Module <TopLevel> compiled
+No errors in compilation
+Analysis of file <"TopLevel.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <TopLevel> in library <work>.
+
+Analyzing hierarchy for module <reg16> in library <work>.
+
+Analyzing hierarchy for module <Addby2> in library <work>.
+
+Analyzing hierarchy for module <ALUSourceBMux> in library <work>.
+
+Analyzing hierarchy for module <MemoryAddressSelector> in library <work>.
+
+Analyzing hierarchy for module <AluTheGOD> in library <work>.
+
+Analyzing hierarchy for module <RegisterFileDataInputMux> in library <work>.
+
+Analyzing hierarchy for module <RegisterFileWriteAddressMux> in library <work>.
+
+Analyzing hierarchy for module <ZeroExtender> in library <work>.
+
+Analyzing hierarchy for module <ZE44> in library <work>.
+
+Analyzing hierarchy for module <adder> in library <work>.
+
+Analyzing hierarchy for module <FORCEMSB0> in library <work>.
+
+Analyzing hierarchy for module <RegisterFile> in library <work>.
+
+Analyzing hierarchy for module <twoInputMux> in library <work>.
+
+Analyzing hierarchy for module <FD16RE_MXILINX_TopLevel> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work>.
+
+Analyzing hierarchy for module <IFD_MXILINX_TopLevel> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <subByOne> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_reg16> in library <work>.
+
+WARNING:Xst:2591 - "TopLevel.vf" line 45: attribute on instance <IBUF_DELAY_VALUE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "TopLevel.vf" line 45: attribute on instance <IFD_DELAY_VALUE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "TopLevel.vf" line 45: attribute on instance <IOSTANDARD> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <TopLevel>.
+WARNING:Xst:2211 - "ipcore_dir/memory.v" line 395: Instantiating black box module <memory>.
+Module <TopLevel> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_155_0" for instance <XLXI_155> in unit <TopLevel>.
+    Set user-defined property "HU_SET =  XLXI_157_1" for instance <XLXI_157> in unit <TopLevel>.
+Analyzing module <reg16> in library <work>.
+Module <reg16> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_2" for instance <XLXI_2> in unit <reg16>.
+Analyzing module <FD16CE_MXILINX_reg16> in library <work>.
+Module <FD16CE_MXILINX_reg16> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_reg16>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_reg16>.
+Analyzing module <Addby2> in library <work>.
+Module <Addby2> is correct for synthesis.
+ 
+Analyzing module <ALUSourceBMux> in library <work>.
+Module <ALUSourceBMux> is correct for synthesis.
+ 
+Analyzing module <MemoryAddressSelector> in library <work>.
+Module <MemoryAddressSelector> is correct for synthesis.
+ 
+Analyzing module <AluTheGOD> in library <work>.
+Module <AluTheGOD> is correct for synthesis.
+ 
+Analyzing module <RegisterFileDataInputMux> in library <work>.
+Module <RegisterFileDataInputMux> is correct for synthesis.
+ 
+Analyzing module <RegisterFileWriteAddressMux> in library <work>.
+Module <RegisterFileWriteAddressMux> is correct for synthesis.
+ 
+Analyzing module <ZeroExtender> in library <work>.
+Module <ZeroExtender> is correct for synthesis.
+ 
+Analyzing module <ZE44> in library <work>.
+Module <ZE44> is correct for synthesis.
+ 
+Analyzing module <adder> in library <work>.
+Module <adder> is correct for synthesis.
+ 
+Analyzing module <FORCEMSB0> in library <work>.
+Module <FORCEMSB0> is correct for synthesis.
+ 
+Analyzing module <RegisterFile> in library <work>.
+Module <RegisterFile> is correct for synthesis.
+ 
+Analyzing module <twoInputMux> in library <work>.
+Module <twoInputMux> is correct for synthesis.
+ 
+Analyzing module <FD16RE_MXILINX_TopLevel> in library <work>.
+Module <FD16RE_MXILINX_TopLevel> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16RE_MXILINX_TopLevel>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16RE_MXILINX_TopLevel>.
+Analyzing module <ALU> in library <work>.
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <IFD_MXILINX_TopLevel> in library <work>.
+	INIT = 1'b0
+Module <IFD_MXILINX_TopLevel> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_15> in unit <IFD_MXILINX_TopLevel>.
+    Set user-defined property "IOB =  TRUE" for instance <I_36_15> in unit <IFD_MXILINX_TopLevel>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <I_36_24> in unit <IFD_MXILINX_TopLevel>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <I_36_24> in unit <IFD_MXILINX_TopLevel>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <I_36_24> in unit <IFD_MXILINX_TopLevel>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <I_36_24> in unit <IFD_MXILINX_TopLevel>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <I_36_24> in unit <IFD_MXILINX_TopLevel>.
+Analyzing module <subByOne> in library <work>.
+Module <subByOne> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <error> in unit <ALU> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <Addby2>.
+    Related source file is "Addby2.v".
+    Found 16-bit adder for signal <nextPC>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Addby2> synthesized.
+
+
+Synthesizing Unit <ALUSourceBMux>.
+    Related source file is "ALUSourceBMux.v".
+    Found 16-bit 4-to-1 multiplexer for signal <r>.
+    Summary:
+	inferred  16 Multiplexer(s).
+Unit <ALUSourceBMux> synthesized.
+
+
+Synthesizing Unit <MemoryAddressSelector>.
+    Related source file is "MemoryAddressSelector.v".
+    Found 16-bit 4-to-1 multiplexer for signal <r>.
+    Summary:
+	inferred  16 Multiplexer(s).
+Unit <MemoryAddressSelector> synthesized.
+
+
+Synthesizing Unit <AluTheGOD>.
+    Related source file is "AluTheGOD.v".
+    Found 16x22-bit ROM for signal <CurrentState$rom0000>.
+    Found 15x1-bit ROM for signal <MRead$mux0000>.
+WARNING:Xst:737 - Found 4-bit latch for signal <NextState>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <MRead>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 4-bit latch for signal <ALUOp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 4-bit register for signal <CurrentState>.
+    Found 4-bit 16-to-1 multiplexer for signal <NextState$mux0000>.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <AluTheGOD> synthesized.
+
+
+Synthesizing Unit <RegisterFileDataInputMux>.
+    Related source file is "RegisterFileDataInputMux.v".
+WARNING:Xst:737 - Found 16-bit latch for signal <r>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 16-bit 6-to-1 multiplexer for signal <r$mux0000>.
+    Summary:
+	inferred  16 Multiplexer(s).
+Unit <RegisterFileDataInputMux> synthesized.
+
+
+Synthesizing Unit <RegisterFileWriteAddressMux>.
+    Related source file is "RegisterFileWriteAddressMux.v".
+WARNING:Xst:737 - Found 4-bit latch for signal <r>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 4-bit 3-to-1 multiplexer for signal <r$mux0000>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <RegisterFileWriteAddressMux> synthesized.
+
+
+Synthesizing Unit <ZeroExtender>.
+    Related source file is "ZeroExtender.v".
+Unit <ZeroExtender> synthesized.
+
+
+Synthesizing Unit <ZE44>.
+    Related source file is "ZE44.v".
+Unit <ZE44> synthesized.
+
+
+Synthesizing Unit <adder>.
+    Related source file is "adder.v".
+    Found 16-bit register for signal <r>.
+    Found 16-bit adder for signal <r$add0000> created at line 28.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <adder> synthesized.
+
+
+Synthesizing Unit <FORCEMSB0>.
+    Related source file is "FORCEMSB0.v".
+WARNING:Xst:647 - Input <notForced<15:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <FORCEMSB0> synthesized.
+
+
+Synthesizing Unit <RegisterFile>.
+    Related source file is "RegisterFile.v".
+WARNING:Xst:737 - Found 16-bit latch for signal <A>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <B>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit 16-to-1 multiplexer for signal <A$mux0000> created at line 67.
+    Found 16-bit 16-to-1 multiplexer for signal <B$mux0000> created at line 85.
+    Found 16-bit register for signal <Eight>.
+    Found 16-bit register for signal <Eleven>.
+    Found 16-bit register for signal <Fifteen>.
+    Found 16-bit register for signal <Five>.
+    Found 16-bit register for signal <Four>.
+    Found 16-bit register for signal <Fourteen>.
+    Found 16-bit register for signal <Nine>.
+    Found 16-bit register for signal <One>.
+    Found 16-bit register for signal <Seven>.
+    Found 16-bit register for signal <Six>.
+    Found 16-bit register for signal <Ten>.
+    Found 16-bit register for signal <Thirteen>.
+    Found 16-bit register for signal <Three>.
+    Found 16-bit register for signal <Twelve>.
+    Found 16-bit register for signal <Two>.
+    Found 16-bit register for signal <Zero>.
+    Summary:
+	inferred 256 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <RegisterFile> synthesized.
+
+
+Synthesizing Unit <twoInputMux>.
+    Related source file is "twoInputMux.v".
+Unit <twoInputMux> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "ALU.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <cout>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 16-bit latch for signal <r>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 16-bit adder carry out for signal <AUX_4$addsub0000>.
+    Found 16-bit comparator greater for signal <old_compareVal_6$cmp_gt0000> created at line 48.
+    Found 16-bit subtractor for signal <r$addsub0000> created at line 47.
+    Found 16-bit shifter logical left for signal <r$shift0002> created at line 44.
+    Found 16-bit shifter logical right for signal <r$shift0003> created at line 45.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <subByOne>.
+    Related source file is "subByOne.v".
+    Found 16-bit subtractor for signal <result>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <subByOne> synthesized.
+
+
+Synthesizing Unit <FD16RE_MXILINX_TopLevel>.
+    Related source file is "TopLevel.vf".
+Unit <FD16RE_MXILINX_TopLevel> synthesized.
+
+
+Synthesizing Unit <IFD_MXILINX_TopLevel>.
+    Related source file is "TopLevel.vf".
+Unit <IFD_MXILINX_TopLevel> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_reg16>.
+    Related source file is "reg16.vf".
+Unit <FD16CE_MXILINX_reg16> synthesized.
+
+
+Synthesizing Unit <reg16>.
+    Related source file is "reg16.vf".
+Unit <reg16> synthesized.
+
+
+Synthesizing Unit <TopLevel>.
+    Related source file is "TopLevel.vf".
+WARNING:Xst:653 - Signal <XLXN_233> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
+Unit <TopLevel> synthesized.
+
+WARNING:Xst:524 - All outputs of the instance <XLXI_159> of the block <subByOne> are unconnected in block <TopLevel>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 15x1-bit ROM                                          : 1
+ 16x22-bit ROM                                         : 1
+# Adders/Subtractors                                   : 4
+ 16-bit adder                                          : 2
+ 16-bit adder carry out                                : 1
+ 16-bit subtractor                                     : 1
+# Registers                                            : 18
+ 16-bit register                                       : 17
+ 4-bit register                                        : 1
+# Latches                                              : 9
+ 1-bit latch                                           : 2
+ 16-bit latch                                          : 4
+ 4-bit latch                                           : 3
+# Comparators                                          : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 8
+ 16-bit 16-to-1 multiplexer                            : 2
+ 16-bit 4-to-1 multiplexer                             : 3
+ 16-bit 6-to-1 multiplexer                             : 1
+ 4-bit 16-to-1 multiplexer                             : 1
+ 4-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/memory.ngc>.
+Loading core <memory> for timing and area information for instance <XLXI_123>.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <AluTheGOD>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_CurrentState_rom0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_MRead_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <AluTheGOD> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 15x1-bit ROM                                          : 1
+ 16x22-bit ROM                                         : 1
+# Adders/Subtractors                                   : 4
+ 16-bit adder                                          : 2
+ 16-bit adder carry out                                : 1
+ 16-bit subtractor                                     : 1
+# Registers                                            : 373
+ Flip-Flops                                            : 373
+# Latches                                              : 9
+ 1-bit latch                                           : 2
+ 16-bit latch                                          : 4
+ 4-bit latch                                           : 3
+# Comparators                                          : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 38
+ 1-bit 16-to-1 multiplexer                             : 32
+ 16-bit 4-to-1 multiplexer                             : 3
+ 16-bit 6-to-1 multiplexer                             : 1
+ 4-bit 16-to-1 multiplexer                             : 1
+ 4-bit 3-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ALUOp_3> (without init value) has a constant value of 0 in block <AluTheGOD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: compareVal<1>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: compareVal<0>.
+
+Optimizing unit <TopLevel> ...
+
+Optimizing unit <adder> ...
+
+Optimizing unit <FD16RE_MXILINX_TopLevel> ...
+
+Optimizing unit <IFD_MXILINX_TopLevel> ...
+
+Optimizing unit <FD16CE_MXILINX_reg16> ...
+
+Optimizing unit <AluTheGOD> ...
+
+Optimizing unit <RegisterFile> ...
+
+Optimizing unit <ALU> ...
+WARNING:Xst:2677 - Node <XLXI_156/cout> of sequential type is unconnected in block <TopLevel>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopLevel, actual ratio is 11.
+FlipFlop XLXI_71/CurrentState_0 has been replicated 1 time(s)
+FlipFlop XLXI_71/CurrentState_1 has been replicated 1 time(s)
+FlipFlop XLXI_71/CurrentState_2 has been replicated 1 time(s)
+FlipFlop XLXI_71/CurrentState_3 has been replicated 1 time(s)
+Latch XLXI_71/MRead has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_15 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_14 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_13 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_12 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_11 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_10 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_9 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_8 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_7 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_6 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_5 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_4 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_3 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_2 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/B_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop XLXI_71/CurrentState_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop XLXI_71/CurrentState_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop XLXI_71/CurrentState_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop XLXI_71/CurrentState_0 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_15 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_14 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_13 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_12 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_11 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_10 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_9 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_8 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_7 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_6 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_5 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_4 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_3 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_2 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_118/A_0 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_71/ALUOp_2 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_71/ALUOp_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch XLXI_71/ALUOp_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 381
+ Flip-Flops                                            : 381
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopLevel.ngr
+Top Level Output File Name         : TopLevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 163
+
+Cell Usage :
+# BELS                             : 1246
+#      AND2                        : 1
+#      GND                         : 3
+#      INV                         : 5
+#      LUT1                        : 15
+#      LUT2                        : 36
+#      LUT3                        : 451
+#      LUT3_D                      : 4
+#      LUT3_L                      : 13
+#      LUT4                        : 257
+#      LUT4_D                      : 4
+#      LUT4_L                      : 19
+#      MUXCY                       : 76
+#      MUXF5                       : 199
+#      MUXF6                       : 64
+#      MUXF7                       : 32
+#      OR2                         : 1
+#      VCC                         : 2
+#      XORCY                       : 64
+# FlipFlops/Latches                : 496
+#      FD                          : 28
+#      FDCE                        : 81
+#      FDE                         : 3
+#      FDE_1                       : 256
+#      FDRE                        : 16
+#      LD                          : 106
+#      LD_1                        : 6
+# RAMS                             : 20
+#      RAMB16_S1_S1                : 16
+#      RAMB16_S4_S4                : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 163
+#      IBUF                        : 1
+#      OBUF                        : 162
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      541  out of   4656    11%  
+ Number of Slice Flip Flops:            455  out of   9312     4%  
+ Number of 4 input LUTs:                804  out of   9312     8%  
+ Number of IOs:                         163
+ Number of bonded IOBs:                 163  out of    232    70%  
+    IOB Flip Flops:                      41
+ Number of BRAMs:                        20  out of     20   100%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)                                                                                                         | Load  |
+--------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
+CLK                                                     | BUFGP                                                                                                                         | 404   |
+XLXI_123/N1                                             | NONE(XLXI_123/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/s3_init.ram/dpram.dp1x1.ram)| 20    |
+A/XLXN_1                                                | NONE(XLXI_108/r_3)                                                                                                            | 4     |
+N1                                                      | NONE(XLXI_105/r_0)                                                                                                            | 16    |
+XLXI_71/NextState_not0001(XLXI_71/NextState_not000119:O)| NONE(*)(XLXI_71/NextState_3)                                                                                                  | 4     |
+XLXI_71/ALUOp_not0001(XLXI_71/ALUOp_not00011:O)         | NONE(*)(XLXI_71/ALUOp_2)                                                                                                      | 6     |
+XLXI_71/MRead_cmp_eq0000(XLXI_71/MRead_cmp_eq00001:O)   | NONE(*)(XLXI_71/MRead)                                                                                                        | 2     |
+C_AWrite_OBUF1(XLXI_71/ALUOp_mux0000<0>31:O)            | BUFG(*)(XLXI_118/A_15)                                                                                                        | 64    |
+XLXI_156/r_not0001(XLXI_156/r_not00011:O)               | NONE(*)(XLXI_156/r_15)                                                                                                        | 16    |
+--------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+A/XLXN_1(A/XLXI_3:G)               | NONE(A/XLXI_2/I_Q0)    | 80    |
+XLXI_157/XLXN_1(XLXI_157/I_36_29:G)| NONE(XLXI_157/I_36_15) | 1     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 18.150ns (Maximum Frequency: 55.096MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 10.515ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 17.798ns (frequency: 56.186MHz)
+  Total number of paths / destination ports: 27351 / 1015
+-------------------------------------------------------------------------
+Delay:               8.899ns (Levels of Logic = 7)
+  Source:            XLXI_123/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_2 (FF)
+  Destination:       XLXI_118/Fifteen_15 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK falling
+
+  Data Path: XLXI_123/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_2 to XLXI_118/Fifteen_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             17   0.591   1.086  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_2 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe<2>)
+     LUT3:I2->O           16   0.704   1.209  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux171 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux17)
+     LUT4:I0->O            3   0.704   0.566  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux18 (douta<0>)
+     end scope: 'XLXI_123'
+     LUT3:I2->O            1   0.704   0.000  XLXI_105/Mmux_r_mux0000_7 (XLXI_105/Mmux_r_mux0000_7)
+     MUXF5:I0->O           1   0.321   0.499  XLXI_105/Mmux_r_mux0000_5_f5 (XLXI_105/Mmux_r_mux0000_5_f5)
+     LUT3:I1->O            1   0.704   0.000  C_RFWD<2> (XLXI_105/r_mux0000<0>)
+     LD:D->Q              17   0.452   1.051  XLXI_105/r_0 (XLXI_105/r_0)
+     FDE_1:D                   0.308          XLXI_118/Two_0
+    ----------------------------------------
+    Total                      8.899ns (4.488ns logic, 4.411ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_156/r_not0001'
+  Clock period: 18.150ns (frequency: 55.096MHz)
+  Total number of paths / destination ports: 3824 / 16
+-------------------------------------------------------------------------
+Delay:               18.150ns (Levels of Logic = 42)
+  Source:            XLXI_156/r_0 (LATCH)
+  Destination:       XLXI_156/r_15 (LATCH)
+  Source Clock:      XLXI_156/r_not0001 falling
+  Destination Clock: XLXI_156/r_not0001 falling
+
+  Data Path: XLXI_156/r_0 to XLXI_156/r_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               4   0.676   0.762  XLXI_156/r_0 (XLXI_156/r_0)
+     LUT4:I0->O            1   0.704   0.595  XLXI_156/old_compareVal_5_cmp_eq000012 (XLXI_156/old_compareVal_5_cmp_eq000012)
+     LUT4_D:I0->LO         1   0.704   0.179  XLXI_156/old_compareVal_5_cmp_eq000076 (N269)
+     LUT3_D:I1->O          4   0.704   0.622  XLXI_156/_old_compareVal_6<0>1 (XLXN_216<0>)
+     LUT3:I2->O           10   0.704   0.961  XLXI_130/R<0>1 (XLXN_187<0>)
+     LUT2:I1->O            1   0.704   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_lut<0> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<0> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<1> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<2> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<3> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<4> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<5> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<6> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<7> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<8> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<9> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<10> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<11> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<12> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<13> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<14> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<14>)
+     MUXCY:CI->O           1   0.459   0.420  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<15> (XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<15>)
+     INV:I->O              1   0.704   0.424  XLXI_156/Mcompar_old_compareVal_6_cmp_gt0000_cy<15>_inv_INV_0 (XLXI_156/old_compareVal_6_cmp_gt0000)
+     LUT4_L:I3->LO         2   0.704   0.135  XLXI_156/_old_compareVal_6<1>1 (XLXN_216<1>)
+     LUT3:I2->O           11   0.704   1.012  XLXI_130/R<1>1 (XLXN_187<1>)
+     LUT2:I1->O            1   0.704   0.000  XLXI_156/Madd_AUX_4_addsub0000_lut<1> (XLXI_156/Madd_AUX_4_addsub0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<1> (XLXI_156/Madd_AUX_4_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<2> (XLXI_156/Madd_AUX_4_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<3> (XLXI_156/Madd_AUX_4_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<4> (XLXI_156/Madd_AUX_4_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<5> (XLXI_156/Madd_AUX_4_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<6> (XLXI_156/Madd_AUX_4_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<7> (XLXI_156/Madd_AUX_4_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<8> (XLXI_156/Madd_AUX_4_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<9> (XLXI_156/Madd_AUX_4_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<10> (XLXI_156/Madd_AUX_4_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<11> (XLXI_156/Madd_AUX_4_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<12> (XLXI_156/Madd_AUX_4_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<13> (XLXI_156/Madd_AUX_4_addsub0000_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  XLXI_156/Madd_AUX_4_addsub0000_cy<14> (XLXI_156/Madd_AUX_4_addsub0000_cy<14>)
+     XORCY:CI->O           1   0.804   0.424  XLXI_156/Madd_AUX_4_addsub0000_xor<15> (XLXI_156/AUX_4_addsub0000<15>)
+     LUT4_L:I3->LO         1   0.704   0.104  XLXI_156/r_mux0000<15>105_SW0 (N142)
+     LUT4:I3->O            1   0.704   0.000  XLXI_156/r_mux0000<15>105 (XLXI_156/r_mux0000<15>)
+     LD:D                      0.308          XLXI_156/r_15
+    ----------------------------------------
+    Total                     18.150ns (12.512ns logic, 5.638ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 619 / 106
+-------------------------------------------------------------------------
+Offset:              10.515ns (Levels of Logic = 5)
+  Source:            XLXI_71/CurrentState_0 (FF)
+  Destination:       MemoryAddress<11> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: XLXI_71/CurrentState_0 to MemoryAddress<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              26   0.591   1.339  XLXI_71/CurrentState_0 (XLXI_71/CurrentState_0)
+     LUT4:I1->O           17   0.704   1.226  XLXI_71/Mrom_CurrentState_rom000011 (C_PshPop_OBUF)
+     LUT3:I0->O            2   0.704   0.526  XLXI_129/R<9>1 (XLXN_185_9_OBUF)
+     LUT3:I1->O            1   0.704   0.000  XLXI_11/Mmux_r_315 (XLXI_11/Mmux_r_315)
+     MUXF5:I1->O          21   0.321   1.128  XLXI_11/Mmux_r_2_f5_14 (MemoryAddress_9_OBUF)
+     OBUF:I->O                 3.272          MemoryAddress_9_OBUF (MemoryAddress<9>)
+    ----------------------------------------
+    Total                     10.515ns (6.296ns logic, 4.219ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_71/MRead_cmp_eq0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            XLXI_71/MRead_1 (LATCH)
+  Destination:       C_MRead (PAD)
+  Source Clock:      XLXI_71/MRead_cmp_eq0000 rising
+
+  Data Path: XLXI_71/MRead_1 to C_MRead
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             1   0.676   0.420  XLXI_71/MRead_1 (XLXI_71/MRead_1)
+     OBUF:I->O                 3.272          C_MRead_OBUF (C_MRead)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'C_AWrite_OBUF1'
+  Total number of paths / destination ports: 48 / 48
+-------------------------------------------------------------------------
+Offset:              6.805ns (Levels of Logic = 3)
+  Source:            XLXI_118/A_11 (LATCH)
+  Destination:       MemoryAddress<11> (PAD)
+  Source Clock:      C_AWrite_OBUF1 falling
+
+  Data Path: XLXI_118/A_11 to MemoryAddress<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               6   0.676   0.704  XLXI_118/A_11 (XLXI_118/A_11)
+     LUT3:I2->O            1   0.704   0.000  XLXI_11/Mmux_r_32 (XLXI_11/Mmux_r_32)
+     MUXF5:I1->O          21   0.321   1.128  XLXI_11/Mmux_r_2_f5_1 (MemoryAddress_11_OBUF)
+     OBUF:I->O                 3.272          MemoryAddress_11_OBUF (MemoryAddress<11>)
+    ----------------------------------------
+    Total                      6.805ns (4.973ns logic, 1.832ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_156/r_not0001'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              6.767ns (Levels of Logic = 3)
+  Source:            XLXI_156/r_11 (LATCH)
+  Destination:       MemoryAddress<11> (PAD)
+  Source Clock:      XLXI_156/r_not0001 falling
+
+  Data Path: XLXI_156/r_11 to MemoryAddress<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               4   0.676   0.666  XLXI_156/r_11 (XLXI_156/r_11)
+     LUT3:I1->O            1   0.704   0.000  XLXI_11/Mmux_r_42 (XLXI_11/Mmux_r_42)
+     MUXF5:I0->O          21   0.321   1.128  XLXI_11/Mmux_r_2_f5_1 (MemoryAddress_11_OBUF)
+     OBUF:I->O                 3.272          MemoryAddress_11_OBUF (MemoryAddress<11>)
+    ----------------------------------------
+    Total                      6.767ns (4.973ns logic, 1.794ns route)
+                                       (73.5% logic, 26.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_71/ALUOp_not0001'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.368ns (Levels of Logic = 1)
+  Source:            XLXI_71/ALUOp_2_1 (LATCH)
+  Destination:       C_ALUOp<2> (PAD)
+  Source Clock:      XLXI_71/ALUOp_not0001 falling
+
+  Data Path: XLXI_71/ALUOp_2_1 to C_ALUOp<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.676   0.420  XLXI_71/ALUOp_2_1 (XLXI_71/ALUOp_2_1)
+     OBUF:I->O                 3.272          C_ALUOp_2_OBUF (C_ALUOp<2>)
+    ----------------------------------------
+    Total                      4.368ns (3.948ns logic, 0.420ns route)
+                                       (90.4% logic, 9.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.54 secs
+ 
+--> 
+
+
+Total memory usage is 539512 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

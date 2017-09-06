@@ -1,0 +1,655 @@
+var _user$project$Update$spawnPowerups = F2(
+	function (model, seconds) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], seconds, 20),
+			0) ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				pUps: A2(
+					_elm_lang$core$List$append,
+					model.pUps,
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple3', _0: 250, _1: 250, _2: _user$project$Types$Sine},
+						_1: {ctor: '[]'}
+					})
+			}) : (_elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], seconds - 5, 20),
+			0) ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				pUps: A2(
+					_elm_lang$core$List$append,
+					model.pUps,
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple3', _0: 250, _1: 480, _2: _user$project$Types$Triple},
+						_1: {ctor: '[]'}
+					})
+			}) : (_elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], seconds - 10, 20),
+			0) ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				pUps: A2(
+					_elm_lang$core$List$append,
+					model.pUps,
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple3', _0: 30, _1: 250, _2: _user$project$Types$Homing},
+						_1: {ctor: '[]'}
+					})
+			}) : model));
+	});
+var _user$project$Update$updateEnemy = F3(
+	function (model, delta, updater) {
+		var _p0 = updater;
+		return A2(_p0._1, model, delta);
+	});
+var _user$project$Update$updateBullet = F3(
+	function (model, delta, updater) {
+		var _p1 = updater;
+		if (_p1.ctor === 'BUpdater') {
+			return _p1._1(delta);
+		} else {
+			return A2(_p1._1, model, delta);
+		}
+	});
+var _user$project$Update$updateDots = F2(
+	function (dots, delta) {
+		return A2(
+			_elm_lang$core$List$map,
+			function (dot) {
+				var _p2 = dot;
+				var x = _p2._0;
+				var y = _p2._1;
+				return {
+					ctor: '_Tuple2',
+					_0: x,
+					_1: _elm_lang$core$Basics$toFloat(
+						A2(
+							_elm_lang$core$Basics_ops['%'],
+							_elm_lang$core$Basics$round(y - (delta * 30)),
+							500))
+				};
+			},
+			dots);
+	});
+var _user$project$Update$getDistance = F4(
+	function (x1, y1, x2, y2) {
+		return _elm_lang$core$Basics$sqrt(
+			Math.pow(y2 - y1, 2) + Math.pow(x2 - x1, 2));
+	});
+var _user$project$Update$getClosestEnemy = F4(
+	function (model, x, y, defaultEnemy) {
+		var enemy = A3(
+			_elm_lang$core$List$foldr,
+			F2(
+				function (enemy, acc) {
+					var _p3 = enemy;
+					var _p4 = acc;
+					return (_elm_lang$core$Native_Utils.cmp(
+						A4(_user$project$Update$getDistance, _p3._0._0, _p3._0._1, x, y),
+						A4(_user$project$Update$getDistance, model.x, model.y, _p4._0._0, _p4._0._1)) < 0) ? enemy : acc;
+				}),
+			defaultEnemy,
+			model.enemies);
+		var _p5 = enemy;
+		return {ctor: '_Tuple2', _0: _p5._0._0, _1: _p5._0._1};
+	});
+var _user$project$Update$hit = F8(
+	function (x1, y1, width1, height1, x2, y2, width2, height2) {
+		return (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$Basics$abs(x1 - x2),
+			(width1 / 2) + (width2 / 2)) < 0) && (_elm_lang$core$Native_Utils.cmp(
+			_elm_lang$core$Basics$abs(y1 - y2),
+			(height1 / 2) + (height2 / 2)) < 0);
+	});
+var _user$project$Update$isEnemyHitByBullet = F2(
+	function (enemy, bullet) {
+		var _p6 = enemy;
+		var _p11 = _p6._0._1;
+		var _p10 = _p6._0._0;
+		var _p9 = _p6._0._2;
+		var _p8 = _p6._0._3;
+		var _p7 = bullet;
+		if (_p7.ctor === 'BUpdater') {
+			return A8(_user$project$Update$hit, _p10, _p11, _p9, _p8, _p7._0._0, _p7._0._1, 5, 5);
+		} else {
+			return A8(_user$project$Update$hit, _p10, _p11, _p9, _p8, _p7._0._0, _p7._0._1, 5, 5);
+		}
+	});
+var _user$project$Update$enemyIsAlive = F2(
+	function (model, updater) {
+		var _p12 = updater;
+		var _p14 = _p12._0._1;
+		var _p13 = _p12._0._0;
+		return ((_elm_lang$core$Native_Utils.cmp(_p13, 500) < 1) && ((_elm_lang$core$Native_Utils.cmp(_p13, 0) > -1) && ((_elm_lang$core$Native_Utils.cmp(_p14, 500) < 1) && (_elm_lang$core$Native_Utils.cmp(_p14, 0) > -1)))) && (!A3(
+			_elm_lang$core$List$foldr,
+			F2(
+				function (bullet, acc) {
+					return acc || A2(_user$project$Update$isEnemyHitByBullet, updater, bullet);
+				}),
+			false,
+			model.bullets));
+	});
+var _user$project$Update$isPlayerHitByEnemy = F2(
+	function (model, enemy) {
+		var _p15 = enemy;
+		return A8(_user$project$Update$hit, _p15._0._0, _p15._0._1, _p15._0._2, _p15._0._3, model.x, model.y, model.width, model.height);
+	});
+var _user$project$Update$isPlayerHitByBullet = F2(
+	function (model, bullet) {
+		var _p16 = bullet;
+		if (_p16.ctor === 'BUpdater') {
+			return A8(_user$project$Update$hit, _p16._0._0, _p16._0._1, 5, 5, model.x, model.y, model.width, model.height);
+		} else {
+			return A8(_user$project$Update$hit, _p16._0._0, _p16._0._1, 5, 5, model.x, model.y, model.width, model.height);
+		}
+	});
+var _user$project$Update$dealWithPlayerCollision = function (model) {
+	return (A3(
+		_elm_lang$core$List$foldr,
+		F2(
+			function (enemy, acc) {
+				return acc || A2(_user$project$Update$isPlayerHitByEnemy, model, enemy);
+			}),
+		false,
+		model.enemies) || A3(
+		_elm_lang$core$List$foldr,
+		F2(
+			function (bullet, acc) {
+				return acc || A2(_user$project$Update$isPlayerHitByBullet, model, bullet);
+			}),
+		false,
+		model.bullets)) ? _elm_lang$core$Native_Utils.update(
+		model,
+		{
+			x: 9999999,
+			enemies: {ctor: '[]'},
+			bullets: {ctor: '[]'}
+		}) : model;
+};
+var _user$project$Update$getPowerUp = function (model) {
+	var tmp = A3(
+		_elm_lang$core$List$foldr,
+		F2(
+			function (_p17, acc) {
+				var _p18 = _p17;
+				var _p19 = acc;
+				if (_p19.ctor === 'Straight') {
+					return A8(_user$project$Update$hit, model.x, model.y, model.width, model.height, _p18._0, _p18._1, 10, 10) ? _p18._2 : acc;
+				} else {
+					return acc;
+				}
+			}),
+		_user$project$Types$Straight,
+		model.pUps);
+	return _elm_lang$core$Native_Utils.eq(tmp, _user$project$Types$Straight) ? model.shootType : tmp;
+};
+var _user$project$Update$removePowerUp = function (model) {
+	return A2(
+		_elm_lang$core$List$filter,
+		function (_p20) {
+			var _p21 = _p20;
+			return !A8(_user$project$Update$hit, model.x, model.y, model.width, model.height, _p21._0, _p21._1, 10, 10);
+		},
+		model.pUps);
+};
+var _user$project$Update$grabPowerUp = function (model) {
+	return _elm_lang$core$Native_Utils.update(
+		model,
+		{
+			shootType: _user$project$Update$getPowerUp(model),
+			pUps: _user$project$Update$removePowerUp(model)
+		});
+};
+var _user$project$Update$bulletIsOnScreen = function (updater) {
+	var _p22 = updater;
+	if (_p22.ctor === 'BUpdater') {
+		var _p24 = _p22._0._1;
+		var _p23 = _p22._0._0;
+		return (_elm_lang$core$Native_Utils.cmp(_p23, 500) < 1) && ((_elm_lang$core$Native_Utils.cmp(_p23, 0) > -1) && ((_elm_lang$core$Native_Utils.cmp(_p24, 500) < 1) && (_elm_lang$core$Native_Utils.cmp(_p24, 0) > -1)));
+	} else {
+		var _p26 = _p22._0._1;
+		var _p25 = _p22._0._0;
+		return (_elm_lang$core$Native_Utils.cmp(_p25, 500) < 1) && ((_elm_lang$core$Native_Utils.cmp(_p25, 0) > -1) && ((_elm_lang$core$Native_Utils.cmp(_p26, 500) < 1) && (_elm_lang$core$Native_Utils.cmp(_p26, 0) > -1)));
+	}
+};
+var _user$project$Update$shootingEnemyUpdate = F9(
+	function (x, y, initialX, initialY, width, height, speed, model, delta) {
+		var newY = y + ((delta / 60) * speed);
+		var deltaY = newY - initialY;
+		var newX = initialX + (120 * _elm_lang$core$Basics$sin(deltaY / 20));
+		return A2(
+			_user$project$Types$EnemyUpdater,
+			{ctor: '_Tuple4', _0: newX, _1: initialY, _2: width, _3: height},
+			A7(_user$project$Update$shootingEnemyUpdate, newX, newY, initialX, initialY, width, height, speed));
+	});
+var _user$project$Update$allahuakbarEnemyUpdate = F7(
+	function (x, y, width, height, speed, model, delta) {
+		var _p27 = {ctor: '_Tuple2', _0: model.x, _1: model.y};
+		var targetX = _p27._0;
+		var targetY = _p27._1;
+		var xDist = x - targetX;
+		var yDist = y - targetY;
+		var realDist = _elm_lang$core$Basics$sqrt(
+			Math.pow(xDist, 2) + Math.pow(yDist, 2));
+		var newX = x - ((((xDist / realDist) * speed) * delta) / 60);
+		var newY = y - ((((yDist / realDist) * speed) * delta) / 60);
+		return A2(
+			_user$project$Types$EnemyUpdater,
+			{ctor: '_Tuple4', _0: newX, _1: newY, _2: width, _3: height},
+			A5(_user$project$Update$allahuakbarEnemyUpdate, newX, newY, width, height, speed));
+	});
+var _user$project$Update$sineEnemyUpdate = F9(
+	function (x, y, initialX, initialY, width, height, speed, model, delta) {
+		var newY = y + ((delta / 60) * speed);
+		var deltaY = newY - initialY;
+		var newX = initialX + (80 * _elm_lang$core$Basics$sin(deltaY / 20));
+		return A2(
+			_user$project$Types$EnemyUpdater,
+			{ctor: '_Tuple4', _0: newX, _1: newY, _2: width, _3: height},
+			A7(_user$project$Update$sineEnemyUpdate, newX, newY, initialX, initialY, width, height, speed));
+	});
+var _user$project$Update$fallingEnemyUpdate = F7(
+	function (x, y, width, height, speed, model, delta) {
+		var newX = x;
+		var newY = y + ((speed * delta) / 60);
+		return A2(
+			_user$project$Types$EnemyUpdater,
+			{ctor: '_Tuple4', _0: newX, _1: newY, _2: width, _3: height},
+			A5(_user$project$Update$fallingEnemyUpdate, newX, newY, width, height, speed));
+	});
+var _user$project$Update$spawnEnemies = F2(
+	function (model, seconds) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], seconds, 20),
+			0) ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				enemies: A2(
+					_elm_lang$core$List$append,
+					model.enemies,
+					{
+						ctor: '::',
+						_0: A7(_user$project$Update$fallingEnemyUpdate, 50, 20, 40, 40, 3, model, 0),
+						_1: {ctor: '[]'}
+					})
+			}) : (_elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], seconds - 5, 20),
+			0) ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				enemies: A2(
+					_elm_lang$core$List$append,
+					model.enemies,
+					{
+						ctor: '::',
+						_0: A9(_user$project$Update$sineEnemyUpdate, 310, 50, 310, 50, 20, 40, 3, model, 0),
+						_1: {ctor: '[]'}
+					})
+			}) : (_elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], seconds - 10, 20),
+			0) ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				enemies: A2(
+					_elm_lang$core$List$append,
+					model.enemies,
+					{
+						ctor: '::',
+						_0: A7(_user$project$Update$allahuakbarEnemyUpdate, 310, 40, 10, 30, 3, model, 0),
+						_1: {ctor: '[]'}
+					})
+			}) : (_elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], seconds - 15, 20),
+			0) ? _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				enemies: A2(
+					_elm_lang$core$List$append,
+					model.enemies,
+					{
+						ctor: '::',
+						_0: A9(_user$project$Update$shootingEnemyUpdate, 200, 20, 200, 20, 60, 20, 3, model, 0),
+						_1: {ctor: '[]'}
+					})
+			}) : model)));
+	});
+var _user$project$Update$stillEnemyUpdate = F6(
+	function (x, y, width, height, model, delta) {
+		return A2(
+			_user$project$Types$EnemyUpdater,
+			{ctor: '_Tuple4', _0: x, _1: y, _2: width, _3: height},
+			A4(_user$project$Update$stillEnemyUpdate, x, y, width, height));
+	});
+var _user$project$Update$homingBulletUpdate = F5(
+	function (x, y, speed, model, delta) {
+		var _p28 = A4(
+			_user$project$Update$getClosestEnemy,
+			model,
+			x,
+			y,
+			A6(_user$project$Update$stillEnemyUpdate, x, -200, 2, 2, model, 0));
+		var targetX = _p28._0;
+		var targetY = _p28._1;
+		var xDist = x - targetX;
+		var yDist = y - targetY;
+		var realDist = _elm_lang$core$Basics$sqrt(
+			Math.pow(xDist, 2) + Math.pow(yDist, 2));
+		var newX = x + ((((xDist / realDist) * speed) * delta) / 60);
+		var newY = y + ((((yDist / realDist) * speed) * delta) / 60);
+		return A2(
+			_user$project$Types$HUpdater,
+			{ctor: '_Tuple2', _0: newX, _1: newY},
+			A3(_user$project$Update$homingBulletUpdate, newX, newY, speed));
+	});
+var _user$project$Update$angleBulletUpdate = F5(
+	function (x, y, xspeed, yspeed, delta) {
+		var newX = x + ((xspeed * delta) / 60);
+		var newY = y + ((yspeed * delta) / 60);
+		return A2(
+			_user$project$Types$BUpdater,
+			{ctor: '_Tuple2', _0: newX, _1: newY},
+			A4(_user$project$Update$angleBulletUpdate, newX, newY, xspeed, yspeed));
+	});
+var _user$project$Update$straightBulletUpdate = F4(
+	function (x, y, speed, delta) {
+		var newX = x;
+		var newY = y + ((speed * delta) / 60);
+		return A2(
+			_user$project$Types$BUpdater,
+			{ctor: '_Tuple2', _0: newX, _1: newY},
+			A3(_user$project$Update$straightBulletUpdate, newX, newY, speed));
+	});
+var _user$project$Update$enemyToBullet = function (enemies) {
+	return A2(
+		_elm_lang$core$List$concatMap,
+		function (enemy) {
+			var _p29 = enemy;
+			var _p32 = _p29._0._1;
+			var _p31 = _p29._0._0;
+			var _p30 = _p29._0._3;
+			return (_elm_lang$core$Native_Utils.cmp(_p32, 30) < 0) ? {
+				ctor: '::',
+				_0: A4(_user$project$Update$straightBulletUpdate, _p31, (_p32 + (_p30 / 2)) + 5, 10, 0),
+				_1: {
+					ctor: '::',
+					_0: A5(_user$project$Update$angleBulletUpdate, _p31, (_p32 + (_p30 / 2)) + 5, 5, 10, 0),
+					_1: {
+						ctor: '::',
+						_0: A5(_user$project$Update$angleBulletUpdate, _p31, (_p32 + (_p30 / 2)) + 5, -5, 10, 0),
+						_1: {ctor: '[]'}
+					}
+				}
+			} : {
+				ctor: '::',
+				_0: A4(_user$project$Update$straightBulletUpdate, _p31, (_p32 + 5) + (_p30 / 2), 5, 0),
+				_1: {ctor: '[]'}
+			};
+		},
+		enemies);
+};
+var _user$project$Update$enemyShoot = function (model) {
+	return _elm_lang$core$Native_Utils.update(
+		model,
+		{
+			bullets: A2(
+				_elm_lang$core$List$append,
+				model.bullets,
+				_user$project$Update$enemyToBullet(model.enemies))
+		});
+};
+var _user$project$Update$sineBulletUpdate = F6(
+	function (x, y, initialX, initialY, speed, delta) {
+		var newY = y + ((delta / 60) * speed);
+		var deltaY = newY - initialY;
+		var newX = initialX + (15 * _elm_lang$core$Basics$sin(deltaY / 20));
+		return A2(
+			_user$project$Types$BUpdater,
+			{ctor: '_Tuple2', _0: newX, _1: newY},
+			A5(_user$project$Update$sineBulletUpdate, newX, newY, initialX, initialY, speed));
+	});
+var _user$project$Update$spawnHomingBullet = F2(
+	function (model, speed) {
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				bullets: A2(
+					_elm_lang$core$List$append,
+					model.bullets,
+					{
+						ctor: '::',
+						_0: A5(_user$project$Update$homingBulletUpdate, model.x, (model.y - (model.height / 2)) - 10, speed, model, 0),
+						_1: {ctor: '[]'}
+					})
+			});
+	});
+var _user$project$Update$spawnTripleBullet = F3(
+	function (model, xspeed, yspeed) {
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				bullets: A2(
+					_elm_lang$core$List$append,
+					model.bullets,
+					{
+						ctor: '::',
+						_0: A4(_user$project$Update$straightBulletUpdate, model.x, model.y - (model.height / 2), yspeed, 0),
+						_1: {
+							ctor: '::',
+							_0: A5(_user$project$Update$angleBulletUpdate, model.x, model.y - (model.height / 2), xspeed, yspeed, 0),
+							_1: {
+								ctor: '::',
+								_0: A5(_user$project$Update$angleBulletUpdate, model.x, model.y - (model.height / 2), 0 - xspeed, yspeed, 0),
+								_1: {ctor: '[]'}
+							}
+						}
+					})
+			});
+	});
+var _user$project$Update$spawnSineBullet = F2(
+	function (model, speed) {
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				bullets: A2(
+					_elm_lang$core$List$append,
+					model.bullets,
+					{
+						ctor: '::',
+						_0: A6(_user$project$Update$sineBulletUpdate, model.x, model.y - (model.height / 2), model.x, model.y - (model.height / 2), speed, 0),
+						_1: {ctor: '[]'}
+					})
+			});
+	});
+var _user$project$Update$spawnStraightBullet = F2(
+	function (model, speed) {
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				bullets: A2(
+					_elm_lang$core$List$append,
+					model.bullets,
+					{
+						ctor: '::',
+						_0: A4(_user$project$Update$straightBulletUpdate, model.x, model.y - (model.height / 2), speed, 0),
+						_1: {ctor: '[]'}
+					})
+			});
+	});
+var _user$project$Update$playerShoot = function (model) {
+	var _p33 = model.shootType;
+	switch (_p33.ctor) {
+		case 'Straight':
+			return A2(_user$project$Update$spawnStraightBullet, model, -20);
+		case 'Sine':
+			return A2(_user$project$Update$spawnSineBullet, model, -20);
+		case 'Homing':
+			return A2(_user$project$Update$spawnHomingBullet, model, -20);
+		default:
+			return A3(_user$project$Update$spawnTripleBullet, model, 5, -20);
+	}
+};
+var _user$project$Update$updateControls = F2(
+	function (model, keyCode) {
+		var _p34 = keyCode;
+		switch (_p34.ctor) {
+			case 'Right':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{x: model.x + model.vel, key: keyCode});
+			case 'Left':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{x: model.x - model.vel, key: keyCode});
+			case 'Up':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y - model.vel, key: keyCode});
+			case 'Down':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y + model.vel, key: keyCode});
+			case 'UpLeft':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y - model.vel, x: model.x - model.vel, key: keyCode});
+			case 'UpRight':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y - model.vel, x: model.x + model.vel, key: keyCode});
+			case 'DownLeft':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y + model.vel, x: model.x - model.vel, key: keyCode});
+			case 'DownRight':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{y: model.y + model.vel, x: model.x + model.vel, key: keyCode});
+			case 'Shoot':
+				return _user$project$Update$playerShoot(
+					A2(_user$project$Update$updateControls, model, model.key));
+			case 'One':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{shootType: _user$project$Types$Straight});
+			case 'Two':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{shootType: _user$project$Types$Sine});
+			case 'Three':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{shootType: _user$project$Types$Triple});
+			case 'Four':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{shootType: _user$project$Types$Homing});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{key: keyCode});
+		}
+	});
+var _user$project$Update$update = F2(
+	function (msg, model) {
+		var _p35 = msg;
+		switch (_p35.ctor) {
+			case 'Key':
+				return {
+					ctor: '_Tuple2',
+					_0: A2(_user$project$Update$updateControls, model, _p35._0),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'Tock':
+				var _p38 = _p35._0;
+				var _p36 = model.lastTime;
+				if (_p36.ctor === 'Just') {
+					var _p37 = _p36._0;
+					var newEnemies = A2(
+						_elm_lang$core$List$map,
+						A2(_user$project$Update$updateEnemy, model, _p38 - _p37),
+						model.enemies);
+					var newBullets = A2(
+						_elm_lang$core$List$map,
+						A2(_user$project$Update$updateBullet, model, _p38 - _p37),
+						model.bullets);
+					return {
+						ctor: '_Tuple2',
+						_0: A2(
+							_user$project$Update$spawnPowerups,
+							A2(
+								_user$project$Update$spawnEnemies,
+								_user$project$Update$enemyShoot(
+									_user$project$Update$grabPowerUp(
+										_user$project$Update$dealWithPlayerCollision(
+											_elm_lang$core$Native_Utils.update(
+												model,
+												{
+													lastTime: _elm_lang$core$Maybe$Just(_p38),
+													bullets: A2(_elm_lang$core$List$filter, _user$project$Update$bulletIsOnScreen, newBullets),
+													secondCount: model.secondCount + 1,
+													enemies: A2(
+														_elm_lang$core$List$filter,
+														_user$project$Update$enemyIsAlive(model),
+														newEnemies)
+												})))),
+								model.secondCount),
+							model.secondCount),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								lastTime: _elm_lang$core$Maybe$Just(_p38)
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			default:
+				var _p41 = _p35._0;
+				var _p39 = model.lastTime;
+				if (_p39.ctor === 'Just') {
+					var _p40 = _p39._0;
+					var newEnemies = A2(
+						_elm_lang$core$List$map,
+						A2(_user$project$Update$updateEnemy, model, _p41 - _p40),
+						model.enemies);
+					var newBullets = A2(
+						_elm_lang$core$List$map,
+						A2(_user$project$Update$updateBullet, model, _p41 - _p40),
+						model.bullets);
+					return {
+						ctor: '_Tuple2',
+						_0: _user$project$Update$dealWithPlayerCollision(
+							_elm_lang$core$Native_Utils.update(
+								model,
+								{
+									lastTime: _elm_lang$core$Maybe$Just(_p41),
+									motiondots: A2(_user$project$Update$updateDots, model.motiondots, _p41 - _p40),
+									bullets: A2(_elm_lang$core$List$filter, _user$project$Update$bulletIsOnScreen, newBullets),
+									enemies: A2(
+										_elm_lang$core$List$filter,
+										_user$project$Update$enemyIsAlive(model),
+										newEnemies)
+								})),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								lastTime: _elm_lang$core$Maybe$Just(_p41)
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+		}
+	});

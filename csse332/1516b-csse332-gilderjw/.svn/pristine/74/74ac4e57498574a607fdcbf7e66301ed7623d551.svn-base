@@ -1,0 +1,16 @@
+/* This is where you define the structs needed to 
+ * solve this problem.  You can define constants, global
+ *  variables, and function signatures here as well. 
+ *  By <Name>, <Date>
+ */
+
+#ifndef __AIRRES_H__
+#define __AIRRES_H__
+
+#include "./airplane.h"
+
+/*
+ *TODO: Define structs, includes, constants, signatures, etc., here.
+ */
+
+#endif /* __AIRRES_H__ */

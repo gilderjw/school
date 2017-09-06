@@ -1,0 +1,62 @@
+var _user$project$Main_ops = _user$project$Main_ops || {};
+_user$project$Main_ops['>>='] = F3(
+	function (state, next, initSeed) {
+		var _p0 = state(initSeed);
+		var val = _p0._0;
+		var sed = _p0._1;
+		return A2(next, val, sed);
+	});
+var _user$project$Main$return = F2(
+	function (x, seed) {
+		return {ctor: '_Tuple2', _0: x, _1: seed};
+	});
+var _user$project$Main$random = A2(_elm_lang$core$Random$float, 0, 1);
+var _user$project$Main$getRandom = function (seed) {
+	return A2(_elm_lang$core$Random$step, _user$project$Main$random, seed);
+};
+var _user$project$Main$doCode = A2(
+	_user$project$Main_ops['>>='],
+	_user$project$Main$return('Random numbers are '),
+	function (prevResult1) {
+		return A2(
+			_user$project$Main_ops['>>='],
+			_user$project$Main$getRandom,
+			function (prevResult2) {
+				return A2(
+					_user$project$Main_ops['>>='],
+					_user$project$Main$getRandom,
+					function (prevResult3) {
+						return A2(
+							_user$project$Main_ops['>>='],
+							_user$project$Main$getRandom,
+							function (prevResult4) {
+								return _user$project$Main$return(
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										prevResult1,
+										A2(
+											_elm_lang$core$Basics_ops['++'],
+											_elm_lang$core$Basics$toString(prevResult2),
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												' ',
+												A2(
+													_elm_lang$core$Basics_ops['++'],
+													_elm_lang$core$Basics$toString(prevResult3),
+													A2(
+														_elm_lang$core$Basics_ops['++'],
+														' ',
+														_elm_lang$core$Basics$toString(prevResult4)))))));
+							});
+					});
+			});
+	});
+var _user$project$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(
+	function () {
+		var _p1 = _user$project$Main$doCode(
+			_elm_lang$core$Random$initialSeed(4));
+		var output = _p1._0;
+		var seed = _p1._1;
+		return _elm_lang$html$Html$text(
+			_elm_lang$core$Basics$toString(output));
+	}());

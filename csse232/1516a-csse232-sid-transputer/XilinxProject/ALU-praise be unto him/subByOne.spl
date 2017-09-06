@@ -1,0 +1,8 @@
+[Inputs]
+=oldValue[15:0]=
+[Outputs]
+=result[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel subByOne
+

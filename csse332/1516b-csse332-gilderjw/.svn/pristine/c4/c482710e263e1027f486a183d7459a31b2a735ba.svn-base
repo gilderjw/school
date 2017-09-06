@@ -1,0 +1,10 @@
+/* Enter your code for exercise 4.26 in this file.
+ * Be sure to include your name and section number in this document. 
+ * You must also provide a Makefile to compile your program. */
+
+#include <pthread.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  return 0;
+}

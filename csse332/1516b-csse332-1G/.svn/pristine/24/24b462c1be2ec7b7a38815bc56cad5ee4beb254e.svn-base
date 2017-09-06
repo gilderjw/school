@@ -1,0 +1,3 @@
+-after deleting "messag", we can still print it, untill we restart bochs or execute something. Then it's gone. (it was cached maybe?) SOLVED, we terminate() at the end of delete()
+
+-

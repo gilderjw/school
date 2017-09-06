@@ -1,0 +1,38 @@
+/* Jim Gildersleeve Brian Suchy Guilherme Simas */
+We made a real neeto shell for our OS
+
+Shell commands
+	type [fileName]                  - prints out [fileName] (basically cat) 
+  execute [fileName]               - starts [fileName] (./) 
+  delete [fileName]                - deletes [fileName] (rm)
+  copy [fileName], [file2]         - copy [fileName] to [file2] (cp)
+  dir                              - prints directory and number of sectors occupied
+  create [fileName]                - create a file named [fileName] allows user to input text
+  kill [fileName]                  - kill process with given pid
+  listpids [fileName]              - lists all the running processes and pids
+  exfg [fileName]                  - executes [fileName] and blocks shell until termination
+  setbg [Color]                    - changes background to [Color]
+  cls                              - clears the screen (cls)
+  NSA                              - wipes everything on drive to hide from NSA
+  help                             - displays this message
+
+
+
+You can verify functionality by:
+	1. run make
+	2. start bochs
+	3. type "create test"
+	4. type a message to store into the file followed by two new lines
+	5. type copy test newtest
+	6. type dir
+	7. you will see the file that you created and the one that you copied along with size
+	8. type type newtest
+	9. you should see the contents from the file that you made
+	10. type "exec hue"
+	11.	type "listpids" you should see a new user process along with the shell
+	12. type "kill 1" you will notice that hue is killed in listpids
+	13. type "setbg 5" the background should turn pink
+	14. type "cls" the screen will clear 
+	15. type "help" to see the help screen
+	16. type "NSA" this will wipe the drive
+	17. close bochs and use hexedit to verify that the NSA cannot get your information

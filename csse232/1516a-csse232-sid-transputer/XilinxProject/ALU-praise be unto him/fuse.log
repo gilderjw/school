@@ -1,0 +1,70 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TopLevel_TopLevel_sch_tb_isim_beh.exe" -prj "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TopLevel_TopLevel_sch_tb_beh.prj" "work.TopLevel_TopLevel_sch_tb" "work.glbl" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ZeroExtender.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ZE44.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/reg16.vf" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/twoInputMux.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/subByOne.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/RegisterFileWriteAddressMux.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/RegisterFileDataInputMux.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/RegisterFile.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/MemoryAddressSelector.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ipcore_dir/memory.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/FORCEMSB0.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/AluTheGOD.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALUSourceBMux.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ALU.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/adder.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/Addby2.v" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TopLevel.vf" into library work
+Analyzing Verilog file "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TEST_top_level.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TEST_top_level.v" Line 45: Port XLXN_185 is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 96580 KB
+Fuse CPU Usage: 950 ms
+Compiling module FDCE
+Compiling module FD16CE_MXILINX_reg16
+Compiling module GND
+Compiling module reg16
+Compiling module Addby2
+Compiling module ALUSourceBMux
+Compiling module MemoryAddressSelector
+Compiling module AluTheGOD
+Compiling module RegisterFileDataInputMux
+Compiling module RegisterFileWriteAddressMux
+Compiling module ZeroExtender
+Compiling module ZE44
+Compiling module adder
+Compiling module FORCEMSB0
+Compiling module RegisterFile
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module memory
+Compiling module twoInputMux
+Compiling module AND2
+Compiling module OR2
+Compiling module FDRE
+Compiling module FD16RE_MXILINX_TopLevel
+Compiling module ALU
+Compiling module IBUF
+Compiling module VCC
+Compiling module IFD_MXILINX_TopLevel
+Compiling module subByOne
+Compiling module TopLevel
+Compiling module TopLevel_TopLevel_sch_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 34 Verilog Units
+Built simulation executable /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/TopLevel_TopLevel_sch_tb_isim_beh.exe
+Fuse Memory Usage: 1184680 KB
+Fuse CPU Usage: 1020 ms
+GCC CPU Usage: 100 ms

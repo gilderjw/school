@@ -1,0 +1,2 @@
+vhdtdtfi -lib work /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxLabs/memory/inbetweener.v -lang verilog -prj memory -o inbetweener.spl -module inbetweener -template /opt/Xilinx/13.4/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e inbetweener.spl /home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxLabs/memory/inbetweener.sym 

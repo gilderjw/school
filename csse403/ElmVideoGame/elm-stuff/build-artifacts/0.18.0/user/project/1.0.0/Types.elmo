@@ -1,0 +1,66 @@
+var _user$project$Types$Model = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return {x: a, y: b, key: c, vel: d, bullets: e, lastTime: f, width: g, height: h, enemies: i, motiondots: j, secondCount: k, shootType: l, pUps: m};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Types$Tock = function (a) {
+	return {ctor: 'Tock', _0: a};
+};
+var _user$project$Types$Tick = function (a) {
+	return {ctor: 'Tick', _0: a};
+};
+var _user$project$Types$Key = function (a) {
+	return {ctor: 'Key', _0: a};
+};
+var _user$project$Types$None = {ctor: 'None'};
+var _user$project$Types$Four = {ctor: 'Four'};
+var _user$project$Types$Three = {ctor: 'Three'};
+var _user$project$Types$Two = {ctor: 'Two'};
+var _user$project$Types$One = {ctor: 'One'};
+var _user$project$Types$Shoot = {ctor: 'Shoot'};
+var _user$project$Types$DownLeft = {ctor: 'DownLeft'};
+var _user$project$Types$DownRight = {ctor: 'DownRight'};
+var _user$project$Types$UpLeft = {ctor: 'UpLeft'};
+var _user$project$Types$UpRight = {ctor: 'UpRight'};
+var _user$project$Types$Down = {ctor: 'Down'};
+var _user$project$Types$Up = {ctor: 'Up'};
+var _user$project$Types$Right = {ctor: 'Right'};
+var _user$project$Types$Left = {ctor: 'Left'};
+var _user$project$Types$HUpdater = F2(
+	function (a, b) {
+		return {ctor: 'HUpdater', _0: a, _1: b};
+	});
+var _user$project$Types$BUpdater = F2(
+	function (a, b) {
+		return {ctor: 'BUpdater', _0: a, _1: b};
+	});
+var _user$project$Types$EnemyUpdater = F2(
+	function (a, b) {
+		return {ctor: 'EnemyUpdater', _0: a, _1: b};
+	});
+var _user$project$Types$Triple = {ctor: 'Triple'};
+var _user$project$Types$Homing = {ctor: 'Homing'};
+var _user$project$Types$Sine = {ctor: 'Sine'};
+var _user$project$Types$Straight = {ctor: 'Straight'};

@@ -1,0 +1,49 @@
+-- Read more about this program in the official Elm guide:
+-- https://guide.elm-lang.org/architecture/user_input/buttons.html
+
+import Html exposing (beginnerProgram, div, button, text)
+import Html.Events exposing (onClick)
+
+main =
+  beginnerProgram { model = ["X", "O", "O", "X", "O", "O", "X", "O", "O", "X"] , view = view, update = update }
+
+toggleIndex : Int -> List(String) -> List(String)
+
+toggleIndex index ls =  
+  List.map 
+    (\(x, y) -> 
+      if x == index || x == index - 1 || x == index + 1 then 
+        (toggleCharacter y)
+      else 
+        y)
+    (List.indexedMap (,) ls)
+
+toggleCharacter : String -> String
+
+toggleCharacter str =
+  if str == "X" then
+    "O"
+  else
+    "X"
+
+
+
+view model =
+  div [] 
+    (List.map
+      (\(index, txt) -> 
+        button [ onClick (Click index)] [ text txt ])
+      (List.indexedMap (,) model))
+    --[ 
+    --, button [ onClick (Click 1)] [ text "X" ]
+    --, button [ onClick (Click 2)] [ text "X" ]
+    --, button [ onClick (Click 3)] [ text "X" ]
+    --, div [] [text (toString model)]
+    --]
+
+type Msg = Click Int 
+
+update msg model =
+  case msg of
+    Click a ->
+      toggleIndex a model

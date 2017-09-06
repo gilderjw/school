@@ -1,0 +1,28 @@
+/* Jim Gildersleeve Brian Suchy Guilherme Simas */
+We made a real neeto shell for our OS
+
+Shell commands
+	-delete <filename>
+		removes the file from the system
+
+	-copy <filein> <fileout>
+		copies file from one name to the other
+
+	-dir
+		lists all files in directory as well as size
+
+	-create <filename>
+		accepts user input until two new lines
+		puts information in a file
+
+
+You can verify functionality by:
+	1. run make
+	2. start bochs
+	3. type "create test"
+	4. type a message to store into the file followed by two new lines
+	5. type copy test newtest
+	6. type dir
+	7. you will see the file that you created and the one that you copied
+	8. type type newtest
+	9. you should see the contents from the file that you made

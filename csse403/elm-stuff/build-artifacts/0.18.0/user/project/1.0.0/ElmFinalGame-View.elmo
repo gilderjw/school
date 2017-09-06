@@ -1,0 +1,109 @@
+var _user$project$ElmFinalGame_View$enemyToImage = function (updater) {
+	var _p0 = updater;
+	var _p2 = _p0._0._2;
+	var _p1 = _p0._0._3;
+	return A2(
+		_elm_lang$svg$Svg$rect,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$x(
+				_elm_lang$core$Basics$toString(_p0._0._0 - (_p2 / 2))),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$y(
+					_elm_lang$core$Basics$toString(_p0._0._1 - (_p1 / 2))),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$width(
+						_elm_lang$core$Basics$toString(_p2)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$height(
+							_elm_lang$core$Basics$toString(_p1)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$fill('ffff00'),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		},
+		{ctor: '[]'});
+};
+var _user$project$ElmFinalGame_View$bulletToImage = function (updater) {
+	var _p3 = updater;
+	return A2(
+		_elm_lang$svg$Svg$circle,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$cx(
+				_elm_lang$core$Basics$toString(_p3._0._0)),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$cy(
+					_elm_lang$core$Basics$toString(_p3._0._1)),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$r('3'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$fill('#ff0000'),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		},
+		{ctor: '[]'});
+};
+var _user$project$ElmFinalGame_View$view = function (model) {
+	return A2(
+		_elm_lang$svg$Svg$svg,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 500 500'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$width('500px'),
+				_1: {ctor: '[]'}
+			}
+		},
+		A2(
+			_elm_lang$core$List$append,
+			A2(
+				_elm_lang$core$List$append,
+				A2(_elm_lang$core$List$map, _user$project$ElmFinalGame_View$bulletToImage, model.bullets),
+				A2(_elm_lang$core$List$map, _user$project$ElmFinalGame_View$enemyToImage, model.enemies)),
+			{
+				ctor: '::',
+				_0: A2(
+					_elm_lang$svg$Svg$rect,
+					{
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$x(
+							_elm_lang$core$Basics$toString(model.x - (model.width / 2))),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$y(
+								_elm_lang$core$Basics$toString(model.y - (model.height / 2))),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$width(
+									_elm_lang$core$Basics$toString(model.width)),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$height(
+										_elm_lang$core$Basics$toString(model.height)),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$fill('#0B79CE'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {ctor: '[]'}
+			}));
+};

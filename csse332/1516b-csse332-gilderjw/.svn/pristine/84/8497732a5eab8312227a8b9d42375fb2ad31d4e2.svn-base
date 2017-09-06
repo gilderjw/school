@@ -1,0 +1,14 @@
+/* This is the shell you must fill in or replace in order to complete
+   this project.  Do not forget to include your name in the initial
+   comments of this file.
+*/
+#include <time.h>
+#include "./airlinereservation.h"
+
+int rows = COACH_ROWS + FIRST_ROWS;
+int across = COACH_ACROSS;
+
+int main(int argc, char* argv[]) {
+  /* TODO: Begin implementing your solutions here. */
+  return 0;
+}

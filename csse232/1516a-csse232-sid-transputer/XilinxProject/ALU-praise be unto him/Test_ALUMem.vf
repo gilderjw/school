@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Test_ALUMem.vf
+// /___/   /\     Timestamp : 11/08/2015 17:46:55
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/ipcore_dir" -intstyle ise -family spartan3e -verilog "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/Test_ALUMem.vf" -w "/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/Test_ALUMem.sch"
+//Design Name: Test_ALUMem
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Test_ALUMem(AddressIn, 
+                   Ainput, 
+                   Binput, 
+                   CLK, 
+                   opcodeinput, 
+                   Writeenable, 
+                   dataOut);
+
+    input [14:0] AddressIn;
+    input [15:0] Ainput;
+    input [15:0] Binput;
+    input CLK;
+    input [3:0] opcodeinput;
+    input [0:0] Writeenable;
+   output [15:0] dataOut;
+   
+   wire [15:0] XLXN_4;
+   
+   memory  XLXI_1 (.addra(AddressIn[14:0]), 
+                  .clka(CLK), 
+                  .dina(XLXN_4[15:0]), 
+                  .ena(), 
+                  .wea(Writeenable[0]), 
+                  .douta(dataOut[15:0]));
+   ALU  XLXI_2 (.a(Ainput[15:0]), 
+               .b(Binput[15:0]), 
+               .opcode(opcodeinput[3:0]), 
+               .compareVal(), 
+               .cout(), 
+               .error(), 
+               .r(XLXN_4[15:0]), 
+               .zero());
+endmodule

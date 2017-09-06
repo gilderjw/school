@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/MemoryAddressSelector.v} -lang verilog -prj AluTheGOD -o MemoryAddressSelector.spl -module MemoryAddressSelector -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e MemoryAddressSelector.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/MemoryAddressSelector.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/MemoryAddressSelector.v} -lang verilog -prj AluTheGOD -o MemoryAddressSelector.spl -module MemoryAddressSelector -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w MemoryAddressSelector.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/MemoryAddressSelector.sym} 

@@ -1,0 +1,269 @@
+var _user$project$View$powerupsToImage = function (_p0) {
+	var _p1 = _p0;
+	var _p4 = _p1._1;
+	var _p3 = _p1._0;
+	var _p2 = _p1._2;
+	switch (_p2.ctor) {
+		case 'Straight':
+			return A2(
+				_elm_lang$svg$Svg$circle,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$cx(
+						_elm_lang$core$Basics$toString(_p3)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cy(
+							_elm_lang$core$Basics$toString(_p4)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$r('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$fill('#124354'),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{ctor: '[]'});
+		case 'Sine':
+			return A2(
+				_elm_lang$svg$Svg$circle,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$cx(
+						_elm_lang$core$Basics$toString(_p3)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cy(
+							_elm_lang$core$Basics$toString(_p4)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$r('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$fill('#f56113'),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{ctor: '[]'});
+		case 'Homing':
+			return A2(
+				_elm_lang$svg$Svg$circle,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$cx(
+						_elm_lang$core$Basics$toString(_p3)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cy(
+							_elm_lang$core$Basics$toString(_p4)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$r('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$fill('#ee2948'),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{ctor: '[]'});
+		default:
+			return A2(
+				_elm_lang$svg$Svg$circle,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$cx(
+						_elm_lang$core$Basics$toString(_p3)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cy(
+							_elm_lang$core$Basics$toString(_p4)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$r('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$fill('#999cb4'),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{ctor: '[]'});
+	}
+};
+var _user$project$View$motiondotToImage = function (_p5) {
+	var _p6 = _p5;
+	return A2(
+		_elm_lang$svg$Svg$rect,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$x(
+				_elm_lang$core$Basics$toString(_p6._0)),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$y(
+					_elm_lang$core$Basics$toString(_p6._1)),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$width('5'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$height('10'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$fill('#CCCCCC'),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		},
+		{ctor: '[]'});
+};
+var _user$project$View$enemyToImage = function (updater) {
+	var _p7 = updater;
+	var _p9 = _p7._0._2;
+	var _p8 = _p7._0._3;
+	return A2(
+		_elm_lang$svg$Svg$rect,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$x(
+				_elm_lang$core$Basics$toString(_p7._0._0 - (_p9 / 2))),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$y(
+					_elm_lang$core$Basics$toString(_p7._0._1 - (_p8 / 2))),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$width(
+						_elm_lang$core$Basics$toString(_p9)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$height(
+							_elm_lang$core$Basics$toString(_p8)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$fill('#ffff00'),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		},
+		{ctor: '[]'});
+};
+var _user$project$View$bulletToImage = function (updater) {
+	var _p10 = updater;
+	if (_p10.ctor === 'BUpdater') {
+		return A2(
+			_elm_lang$svg$Svg$circle,
+			{
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$cx(
+					_elm_lang$core$Basics$toString(_p10._0._0)),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$cy(
+						_elm_lang$core$Basics$toString(_p10._0._1)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$r('3'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$fill('#ff0000'),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			},
+			{ctor: '[]'});
+	} else {
+		return A2(
+			_elm_lang$svg$Svg$circle,
+			{
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$cx(
+					_elm_lang$core$Basics$toString(_p10._0._0)),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$cy(
+						_elm_lang$core$Basics$toString(_p10._0._1)),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$r('3'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$fill('#ff0000'),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			},
+			{ctor: '[]'});
+	}
+};
+var _user$project$View$view = function (model) {
+	return A2(
+		_elm_lang$svg$Svg$svg,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$viewBox('0 0 500 500'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$width('500px'),
+				_1: {ctor: '[]'}
+			}
+		},
+		A2(
+			_elm_lang$core$List$append,
+			A2(_elm_lang$core$List$map, _user$project$View$powerupsToImage, model.pUps),
+			A2(
+				_elm_lang$core$List$append,
+				A2(_elm_lang$core$List$map, _user$project$View$motiondotToImage, model.motiondots),
+				A2(
+					_elm_lang$core$List$append,
+					A2(
+						_elm_lang$core$List$append,
+						A2(_elm_lang$core$List$map, _user$project$View$bulletToImage, model.bullets),
+						A2(_elm_lang$core$List$map, _user$project$View$enemyToImage, model.enemies)),
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$svg$Svg$rect,
+							{
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$x(
+									_elm_lang$core$Basics$toString(model.x - (model.width / 2))),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$y(
+										_elm_lang$core$Basics$toString(model.y - (model.height / 2))),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$width(
+											_elm_lang$core$Basics$toString(model.width)),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$height(
+												_elm_lang$core$Basics$toString(model.height)),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$fill('#0B79CE'),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {ctor: '[]'}
+					}))));
+};

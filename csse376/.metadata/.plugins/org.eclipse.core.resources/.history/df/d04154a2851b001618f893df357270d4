@@ -1,0 +1,13 @@
+package guiDemo;
+
+import java.awt.Robot;
+
+public class GUIDemo {
+
+	public static void main(String[] args) {
+		Robot robot = new Robot();
+		
+		robot.mouseMove(0, 0);
+	}
+
+}

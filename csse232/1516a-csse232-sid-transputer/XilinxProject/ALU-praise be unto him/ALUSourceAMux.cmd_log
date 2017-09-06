@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALUSourceAMux.v} -lang verilog -prj AluTheGOD -o ALUSourceAMux.spl -module ALUSourceAMux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALUSourceAMux.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/ALUSourceAMux.sym} 

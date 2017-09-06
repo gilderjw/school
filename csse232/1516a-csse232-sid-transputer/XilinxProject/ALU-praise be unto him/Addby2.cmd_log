@@ -1,0 +1,6 @@
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/Addby2.v} -lang verilog -prj AluTheGOD -o Addby2.spl -module Addby2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Addby2.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/AluTheGOD/Addby2.sym} 
+vhdtdtfi -lib work {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/Addby2.v} -lang verilog -prj AluTheGOD -o Addby2.spl -module Addby2 -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Addby2.spl {/home/gilderjw/Documents/csse232/1516a-csse232-sid-transputer/XilinxProject/ALU-praise be unto him/Addby2.sym} 
+vhdtdtfi -lib work {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/Addby2.v} -lang verilog -prj AluTheGOD -o Addby2.spl -module Addby2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Addby2.spl {C:/Users/suchyb/Desktop/CompArch1/final project stuff/XilinxProject/ALU-praise be unto him/Addby2.sym} 

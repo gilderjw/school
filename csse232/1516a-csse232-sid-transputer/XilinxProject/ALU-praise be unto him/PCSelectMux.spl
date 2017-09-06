@@ -1,0 +1,10 @@
+[Inputs]
+PCSrc
+=One[15:0]=
+=Zero[15:0]=
+[Outputs]
+=Output[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel PCSelectMux
+
