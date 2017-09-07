@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ListWorkingDirectoryService
+Bundle-SymbolicName: ListWorkingDirectoryService
+Bundle-Version: 1.0.0.alpha
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: edu.rosehulman.ListWorkingDirectoryService,
+ edu.rosehulman.ListWorkingDirectoryService.impl
+Bundle-Vendor: Rose-Hulman
+Import-Package: edu.rosehulman.ListWorkingDirectoryService,
+ org.osgi.framework;version="1.8.0"
+Bundle-Activator: edu.rosehulman.ListWorkingDirectoryService.impl.ListWorkingDirectoryActivtor
