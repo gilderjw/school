@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CirclePlugin
+Bundle-SymbolicName: CirclePlugin;singleton:=true
+Bundle-Version: 1.0.0.alpha
+Bundle-Vendor: Rose-Hulman
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: edu.rosehulman.assignment2platform,
+ org.osgi.framework
+Bundle-Activator: edu.rosehulman.CirclePlugin.CirclePluginActivator
+Export-Package: edu.rosehulman.CirclePlugin
