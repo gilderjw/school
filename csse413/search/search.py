@@ -121,6 +121,7 @@ def breadthFirstSearch(problem):
   util.raiseNotDefined()
       
 def uniformCostSearch(problem):
+  return genericSearch(problem, util.PriorityQueueWithFunction(lambda (state, path, cost): cost))
   "Search the node of least total cost first. "
   "*** YOUR CODE HERE ***"
   util.raiseNotDefined()
@@ -133,6 +134,14 @@ def nullHeuristic(state, problem=None):
   return 0
 
 def aStarSearch(problem, heuristic=nullHeuristic):
+  def aStarFunc(item):
+    (state, path, cost) = item
+    return cost + heuristic(state, problem)
+
+  return genericSearch(problem, util.PriorityQueueWithFunction(aStarFunc))
+
+
+  queue = util.PriorityQueueWithFunction()
   "Search the node that has the lowest combined cost and heuristic first."
   "*** YOUR CODE HERE ***"
   util.raiseNotDefined()
