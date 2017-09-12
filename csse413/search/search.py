@@ -76,8 +76,6 @@ def genericSearch(problem, dataStructure):
   while True:
     (currstate, path, cost) = dataStructure.pop()
 
-    print(currstate)
-
     if problem.isGoalState(currstate):
       return path
 

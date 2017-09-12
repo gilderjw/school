@@ -270,7 +270,7 @@ class CornersProblem(search.SearchProblem):
     self.walls = startingGameState.getWalls()
     self.startingPosition = startingGameState.getPacmanPosition()
     top, right = self.walls.height-2, self.walls.width-2 
-    self.corners = ((1,1), (1,top), (right, 1), (right, top))
+    self.corners = [(1,1), (1,top), (right, 1), (right, top)]
     for corner in self.corners:
       if not startingGameState.hasFood(*corner):
         print 'Warning: no food in corner ' + str(corner)
@@ -281,11 +281,14 @@ class CornersProblem(search.SearchProblem):
   def getStartState(self):
     "Returns the start state (in your state space, not the full Pacman state space)"
     "*** YOUR CODE HERE ***"
+    return (self.startingPosition, self.corners)
     util.raiseNotDefined()
     
   def isGoalState(self, state):
     "Returns whether this search state is a goal state of the problem"
     "*** YOUR CODE HERE ***"
+    (_, cornersLeft) = state
+    return cornersLeft == []
     util.raiseNotDefined()
        
   def getSuccessors(self, state):
@@ -310,7 +313,15 @@ class CornersProblem(search.SearchProblem):
       #   hitsWall = self.walls[nextx][nexty]
       
       "*** YOUR CODE HERE ***"
-      
+      ((x,y), cornersLeft) = state
+
+      dx, dy = Actions.directionToVector(action)
+      nextx, nexty = int(x + dx), int(y + dy)
+      hitsWall = self.walls[nextx][nexty]
+      if not hitsWall:
+        newCorners = list(set(cornersLeft) - set([(x,y)]))
+        successors += [(((nextx, nexty), newCorners), action, 1)]
+
     self._expanded += 1
     return successors
 
@@ -326,6 +337,23 @@ class CornersProblem(search.SearchProblem):
       x, y = int(x + dx), int(y + dy)
       if self.walls[x][y]: return 999999
     return len(actions)
+
+
+def getClosestPoint(start, ends):
+  (x1, y1) = start
+
+  closestPoint = ends[0]
+  distance = None
+
+  for point in ends:
+    (x2, y2) = point
+    newDist = abs(x1 - x2) + abs(y1 - y2)
+
+    if distance == None or newDist < distance:
+      closestPoint = point
+      distance = newDist
+
+  return (closestPoint, distance)
 
 
 def cornersHeuristic(state, problem):
@@ -345,7 +373,20 @@ def cornersHeuristic(state, problem):
   walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
   
   "*** YOUR CODE HERE ***"
-  return 0 # Default to trivial solution
+  (currentPoint, cornersLeft) = state
+
+  if cornersLeft == []:
+    return 0
+
+  val = 0
+
+  while cornersLeft != []:
+    (closest, dist) = getClosestPoint(currentPoint, cornersLeft)
+    currentPoint = closest
+    cornersLeft = list(set(cornersLeft) - set([closest]))
+    val += dist
+
+  return val # Default to trivial solution
 
 class AStarCornersAgent(SearchAgent):
   "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
