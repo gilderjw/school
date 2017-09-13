@@ -35,6 +35,7 @@ import util
 import time
 import search
 import searchAgents
+import math
 
 class GoWestAgent(Agent):
   "An agent that goes West until it can't."
@@ -450,6 +451,24 @@ class AStarFoodSearchAgent(SearchAgent):
     self.searchFunction = lambda prob: search.aStarSearch(prob, foodHeuristic)
     self.searchType = FoodSearchProblem
 
+
+
+def getFurthestPoint(start, ends):
+  (x1, y1) = start
+
+  furthestPoint = ends[0]
+  distance = None
+
+  for point in ends:
+    (x2, y2) = point
+    newDist = abs(x1 - x2) + abs(y1 - y2)
+
+    if distance == None or newDist > distance:
+      furthestPoint = point
+      distance = newDist
+
+  return (furthestPoint, distance)
+
 def foodHeuristic(state, problem):
   """
   Your heuristic for the FoodSearchProblem goes here.
@@ -476,8 +495,25 @@ def foodHeuristic(state, problem):
   Subsequent calls to this heuristic can access problem.heuristicInfo['wallCount']
   """
   position, foodGrid = state
-  "*** YOUR CODE HERE ***"
-  return 0
+
+  if len(foodGrid.asList()) == 0:
+    return 0
+  elif len(foodGrid.asList()) == 1:
+    (_, dist) = getClosestPoint(position, foodGrid.asList())
+    return dist
+
+  dist = 0
+  (point1, point2) = (None, None)
+  for point in foodGrid.asList():
+    (furthestPoint, tmpdist) = getFurthestPoint(point, foodGrid.asList())
+    if tmpdist > dist:
+      dist = tmpdist
+      (point1, point2) = (point, furthestPoint)
+
+  # print(foodGrid.asList())
+  (furthestPoint, dist2) = getClosestPoint(position, [point1, point2])
+
+  return dist + dist2
   
 class ClosestDotSearchAgent(SearchAgent):
   "Search for all food using a sequence of searches"
@@ -495,7 +531,7 @@ class ClosestDotSearchAgent(SearchAgent):
         currentState = currentState.generateSuccessor(0, action)
     self.actionIndex = 0
     print 'Path found with cost %d.' % len(self.actions)
-    
+
   def findPathToClosestDot(self, gameState):
     "Returns a path (a list of actions) to the closest dot, starting from gameState"
     # Here are some useful elements of the startState
@@ -505,7 +541,7 @@ class ClosestDotSearchAgent(SearchAgent):
     problem = AnyFoodSearchProblem(gameState)
 
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    return search.bfs(problem)
   
 class AnyFoodSearchProblem(PositionSearchProblem):
   """
@@ -539,9 +575,9 @@ class AnyFoodSearchProblem(PositionSearchProblem):
     that will complete the problem definition.
     """
     x,y = state
-    
+
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    return self.food[x][y]
 
 ##################
 # Mini-contest 1 #
